@@ -3,17 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Companias;
-use backend\models\CompaniasSearch;
+use backend\models\Parametrizacion;
+use backend\models\ParametrizacionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\ForbiddenHttpException;
 
 /**
- * CompaniasController implements the CRUD actions for Companias model.
+ * ParametrizacionController implements the CRUD actions for Parametrizacion model.
  */
-class CompaniasController extends Controller
+class ParametrizacionController extends Controller
 {
     /**
      * @inheritdoc
@@ -31,12 +30,12 @@ class CompaniasController extends Controller
     }
 
     /**
-     * Lists all Companias models.
+     * Lists all Parametrizacion models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new CompaniasSearch();
+        $searchModel = new ParametrizacionSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -46,7 +45,7 @@ class CompaniasController extends Controller
     }
 
     /**
-     * Displays a single Companias model.
+     * Displays a single Parametrizacion model.
      * @param integer $id
      * @return mixed
      */
@@ -58,35 +57,25 @@ class CompaniasController extends Controller
     }
 
     /**
-     * Creates a new Companias model.
+     * Creates a new Parametrizacion model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-       if( Yii::$app->user->can('crearcompanias'))
-        {
-        $model = new Companias();
+        $model = new Parametrizacion();
 
-        if ($model->load(Yii::$app->request->post()) ){
-            $model->compania_creado_fecha = date('Y-m-d');
-            $model->save();
-            return $this->redirect(['view', 'id' => $model->compania_id]);
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->parametrizacion_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
             ]);
         }
-         }
-        else
-            {
-            throw new ForbiddenHttpException;
-       }
-        
     }
 
     /**
-     * Updates an existing Companias model.
+     * Updates an existing Parametrizacion model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -96,7 +85,7 @@ class CompaniasController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->compania_id]);
+            return $this->redirect(['view', 'id' => $model->parametrizacion_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -105,7 +94,7 @@ class CompaniasController extends Controller
     }
 
     /**
-     * Deletes an existing Companias model.
+     * Deletes an existing Parametrizacion model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -118,15 +107,15 @@ class CompaniasController extends Controller
     }
 
     /**
-     * Finds the Companias model based on its primary key value.
+     * Finds the Parametrizacion model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Companias the loaded model
+     * @return Parametrizacion the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Companias::findOne($id)) !== null) {
+        if (($model = Parametrizacion::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

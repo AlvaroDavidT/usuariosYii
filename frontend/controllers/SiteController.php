@@ -12,7 +12,8 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-
+use frontend\models\SubirArchivosForm;
+use yii\web\UploadedFile;
 /**
  * Site controller
  */
@@ -88,7 +89,24 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            
+          $model = new SubirArchivosForm;
+        $msg = null;
+        if ($model->load(Yii::$app->request->post())) 
+        {
+            $model->file = UploadedFile::getInstances($model, 'file');
+            if ($model->file && $model->validate()) {
+                foreach ($model->file as $file) {
+                    $file->saveAs('archivos/' . $file->baseName . '.' . $file->extension);
+                    $msg = "<p><strong class='label label-info'>Enhorabuena, subida realizada con éxito</strong></p>";
+                }
+            }
+        }
+        return $this->render("SubirXml", ["model" => $model, "msg" => $msg]);
+            
+            
+            
+           
         } else {
             return $this->render('login', [
                 'model' => $model,
@@ -210,4 +228,21 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+    
+    public function actionUpload() {
+        $model = new FormUpload;
+        $msg = null;
+        if ($model->load(Yii::$app->request->post())) 
+        {
+            $model->file = UploadedFile::getInstances($model, 'file');
+            if ($model->file && $model->validate()) {
+                foreach ($model->file as $file) {
+                    $file->saveAs('archivos/' . $file->baseName . '.' . $file->extension);
+                    $msg = "<p><strong class='label label-info'>Enhorabuena, subida realizada con éxito</strong></p>";
+                }
+            }
+        }
+        return $this->render("upload", ["model" => $model, "msg" => $msg]);
+    }
+
 }

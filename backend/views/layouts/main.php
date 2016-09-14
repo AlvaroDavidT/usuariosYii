@@ -34,12 +34,37 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-    ];
+   
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+        $menuItems = [
+            ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'Login', 'url' => ['/site/login']],
+        
+    ];
     } else {
+         $menuItems= 
+            [
+                                 
+               
+                ['label' => 'Archivos', 'items' => 
+                    [
+                     ['label' => 'Subir Archivos','url' => ['/site/subir']],
+                     ['label' => 'Procesar Archivos','url' => ['/status/create']],
+                    ]
+                ],
+                ['label' => 'Parametrizacion','items' => 
+                    [
+                     ['label' => 'Carpeta','url' => ['/parametrizacion/index']],
+                    ]
+                ],
+                ['label' => 'Usuarios','items' => 
+                    [
+                     ['label' => 'Lista de usuario','url' => ['/user/index']],
+                     ['label' => 'Asignacion Permisos','url' => ['/AuthAssignment/index']],
+                     ['label' => '','url' => ['/user/index']],
+                    ]
+                ]
+            ];     
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
@@ -48,11 +73,19 @@ AppAsset::register($this);
             )
             . Html::endForm()
             . '</li>';
+        
     }
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'nav navbar-nav navbar-right',
+
+	                    'id'=>'navbar-id',
+
+	                    'style'=>'font-size: 12px;',
+
+	                    'data-tag'=>'yii2-menu',],
         'items' => $menuItems,
     ]);
+    
     NavBar::end();
     ?>
 
@@ -68,7 +101,6 @@ AppAsset::register($this);
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>
