@@ -48,7 +48,7 @@ AppAsset::register($this);
                
                 ['label' => 'Archivos', 'items' => 
                     [
-                     ['label' => 'Subir Archivos','url' => ['/site/subir']],
+                     ['label' => 'Subir Archivos','url' => ['/subir/subir']],
                      ['label' => 'Procesar Archivos','url' => ['/status/create']],
                     ]
                 ],

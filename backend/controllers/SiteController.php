@@ -5,10 +5,10 @@ use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use backend\models\SubirForm;
+
 use common\models\LoginForm;
-use yii\web\ForbiddenHttpException;
-use yii\web\UploadedFile;// subir archivos
+
+
 
 /**
  * Site controller
@@ -21,20 +21,20 @@ class SiteController extends Controller
     public function behaviors()
     {
         return [
-      //      'access' => [
-     //           'class' => AccessControl::className(),
-      //          'rules' => [
-       //             [
-      //                  'actions' => ['login', 'error'],
-       //                 'allow' => true,
-        //            ],
-        //            [
-        //                'actions' => ['logout', 'index'],
-        //                'allow' => true,
-         //               'roles' => ['@'],
-          //          ],
-        //        ],
-       //     ],
+          'access' => [
+               'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                       'actions' => ['login', 'error'],
+                        'allow' => true,
+                   ],
+                    [
+                       'actions' => ['logout', 'index'],
+                       'allow' => true,
+                       'roles' => ['@'],
+                   ],
+              ],
+          ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -87,10 +87,6 @@ class SiteController extends Controller
             ]);
         }
     }
-    
-  
-    
-
     /**
      * Logout action.
      *
@@ -103,34 +99,7 @@ class SiteController extends Controller
         return $this->goHome();
     }
     
-    public function actionSubir() 
-    {
-         // echo 'ver';
-        
-          if( Yii::$app->user->can('subirArchivos'))
-         
-         {
-        $model = new SubirForm;
-        $msg = null;
-        if ($model->load(Yii::$app->request->post())) {
-            $model->file = UploadedFile::getInstances($model, 'file');
-            if ($model->file && $model->validate()) {
-                foreach ($model->file as $file) {
-                    $file->saveAs('Archivos/' . $file->baseName . '.' . $file->extension);
-                    echo $file;
-                    $msg = "<h1><strong class='label label-info'>Subida realizada con éxito</strong></h1>";
-                }
-            }
-        }
-        return $this->render("subir", ["model" => $model, "msg" => $msg]);
-         }
-          
-        else
-            {
-            throw new ForbiddenHttpException;
-       }
-              
-    }
+  
 
 
 }

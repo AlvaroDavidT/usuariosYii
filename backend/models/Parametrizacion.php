@@ -43,7 +43,6 @@ class Parametrizacion extends \yii\db\ActiveRecord
             'parametrizacion_id' => 'Parametrizacion ID',
             'nombre_parametrizacion' => 'Nombre Parametrizacion',
             'path_parametrizacion' => 'Path Parametrizacion',
-             'path' => 'Seleccionar path:',
         ];
     }
      

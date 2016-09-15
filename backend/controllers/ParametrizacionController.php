@@ -64,8 +64,12 @@ class ParametrizacionController extends Controller
     public function actionCreate()
     {
         $model = new Parametrizacion();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+           
+        if ($model->load(Yii::$app->request->post())) {  
+            //si ya se lleno el formulario haga esto 
+            
+            
+            $model->save();
             return $this->redirect(['view', 'id' => $model->parametrizacion_id]);
         } else {
             return $this->render('create', [
