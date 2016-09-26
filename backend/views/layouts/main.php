@@ -44,19 +44,21 @@ AppAsset::register($this);
     } else {
          $menuItems= 
             [
-                                 
+                 ['label' => 'Parametrizacion','items' => 
+                    [
+                     ['label' => 'Base de datos','url' => ['/subidos/model']],
+                     ['label' => 'Lectura Xml','url' => ['/paramxml/index']],
+                    ]
+                ],                 
                
                 ['label' => 'Archivos', 'items' => 
                     [
-                     ['label' => 'Subir Archivos','url' => ['/subir/subir']],
-                     ['label' => 'Procesar Archivos','url' => ['/status/create']],
+                     ['label' => 'Subir Archivos','url' => ['/subir/subirxml']],
+                     ['label' => 'Procesar Archivos','url' => ['/subidos/index']],
+                     ['label' => 'Datos de archivos','url' => ['/subidos/datosxml']],
                     ]
                 ],
-                ['label' => 'Parametrizacion','items' => 
-                    [
-                     ['label' => 'Carpeta','url' => ['/parametrizacion/index']],
-                    ]
-                ],
+               
                 ['label' => 'Usuarios','items' => 
                     [
                      ['label' => 'Lista de usuario','url' => ['/user/index']],

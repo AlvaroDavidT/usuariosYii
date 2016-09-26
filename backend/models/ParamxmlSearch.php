@@ -2,15 +2,14 @@
 
 namespace backend\models;
 
-use Yii;
+use backend\models\Paramxml;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Parametrizacion;
 
 /**
- * ParametrizacionSearch represents the model behind the search form about `backend\models\Parametrizacion`.
+ * ParamxmlSearch represents the model behind the search form about `backend\models\Paramxml`.
  */
-class ParametrizacionSearch extends Parametrizacion
+class ParamxmlSearch extends Paramxml
 {
     /**
      * @inheritdoc
@@ -18,8 +17,8 @@ class ParametrizacionSearch extends Parametrizacion
     public function rules()
     {
         return [
-            [['parametrizacion_id'], 'integer'],
-            [['nombre_parametrizacion', 'path_parametrizacion'], 'safe'],
+            [['id', 'Estado'], 'integer'],
+            [['Tag_xml', 'Descripcion'], 'safe'],
         ];
     }
 
@@ -41,7 +40,7 @@ class ParametrizacionSearch extends Parametrizacion
      */
     public function search($params)
     {
-        $query = Parametrizacion::find();
+        $query = Paramxml::find();
 
         // add conditions that should always apply here
 
@@ -59,11 +58,12 @@ class ParametrizacionSearch extends Parametrizacion
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'parametrizacion_id' => $this->parametrizacion_id,
+            'id' => $this->id,
+            'Estado' => $this->Estado,
         ]);
 
-        $query->andFilterWhere(['like', 'nombre_parametrizacion', $this->nombre_parametrizacion])
-            ->andFilterWhere(['like', 'path_parametrizacion', $this->path_parametrizacion]);
+        $query->andFilterWhere(['like', 'Tag_xml', $this->Tag_xml])
+            ->andFilterWhere(['like', 'Descripcion', $this->Descripcion]);
 
         return $dataProvider;
     }

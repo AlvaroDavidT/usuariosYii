@@ -2,11 +2,10 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
+$this->title = 'Subir archivos xml';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<?= $msg ?>
-
-<h3>Subir archivos</h3>
 <?php
 $form = ActiveForm::begin([
             "method" => "post",
@@ -15,5 +14,5 @@ $form = ActiveForm::begin([
         ]);
 ?>
 <?= $form->field($model, "file[]")->fileInput(['multiple' => true]) ?>
-<?= Html::submitButton("subir", ["class" => "btn btn-primary"]) ?>
+<?= Html::submitButton("Subir archivo", ["class" => "btn btn-primary"]) ?>
 <?php $form->end() ?>

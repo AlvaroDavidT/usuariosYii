@@ -3,16 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Parametrizacion;
-use backend\models\ParametrizacionSearch;
+use backend\models\Paramxml;
+use backend\models\ParamxmlSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ParametrizacionController implements the CRUD actions for Parametrizacion model.
+ * ParamxmlController implements the CRUD actions for Paramxml model.
  */
-class ParametrizacionController extends Controller
+class ParamxmlController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class ParametrizacionController extends Controller
     }
 
     /**
-     * Lists all Parametrizacion models.
+     * Lists all Paramxml models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new ParametrizacionSearch();
+        $searchModel = new ParamxmlSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class ParametrizacionController extends Controller
     }
 
     /**
-     * Displays a single Parametrizacion model.
+     * Displays a single Paramxml model.
      * @param integer $id
      * @return mixed
      */
@@ -57,20 +57,16 @@ class ParametrizacionController extends Controller
     }
 
     /**
-     * Creates a new Parametrizacion model.
+     * Creates a new Paramxml model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Parametrizacion();
-           
-        if ($model->load(Yii::$app->request->post())) {  
-            //si ya se lleno el formulario haga esto 
-            
-            
-            $model->save();
-            return $this->redirect(['view', 'id' => $model->parametrizacion_id]);
+        $model = new Paramxml();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -79,7 +75,7 @@ class ParametrizacionController extends Controller
     }
 
     /**
-     * Updates an existing Parametrizacion model.
+     * Updates an existing Paramxml model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -89,7 +85,7 @@ class ParametrizacionController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->parametrizacion_id]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -98,7 +94,7 @@ class ParametrizacionController extends Controller
     }
 
     /**
-     * Deletes an existing Parametrizacion model.
+     * Deletes an existing Paramxml model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -111,15 +107,15 @@ class ParametrizacionController extends Controller
     }
 
     /**
-     * Finds the Parametrizacion model based on its primary key value.
+     * Finds the Paramxml model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Parametrizacion the loaded model
+     * @return Paramxml the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Parametrizacion::findOne($id)) !== null) {
+        if (($model = Paramxml::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
