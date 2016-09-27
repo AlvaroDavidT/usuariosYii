@@ -47,7 +47,8 @@ AppAsset::register($this);
                  ['label' => 'Parametrizacion','items' => 
                     [
                      ['label' => 'Base de datos','url' => ['/subidos/model']],
-                     ['label' => 'Lectura Xml','url' => ['/paramxml/index']],
+                     ['label' => 'Tag Xml','url' => ['/paramxml/index']],
+                     ['label' => 'Envio Datos','url' => ['/parametrizacion-datos-envio/index']],
                     ]
                 ],                 
                
@@ -56,6 +57,11 @@ AppAsset::register($this);
                      ['label' => 'Subir Archivos','url' => ['/subir/subirxml']],
                      ['label' => 'Procesar Archivos','url' => ['/subidos/index']],
                      ['label' => 'Datos de archivos','url' => ['/subidos/datosxml']],
+                    ]
+                ],
+                 ['label' => 'Documentos Pago','items' => 
+                    [
+                     ['label' => 'Pagos','url' => ['/documentospago/index']],
                     ]
                 ],
                

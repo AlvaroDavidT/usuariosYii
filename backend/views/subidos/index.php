@@ -28,7 +28,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'Estado'
         ],
     ]);
-echo \yii\helpers\Html::buttonInput("Presioname!", ['onclick' => 'verAlertJS();']);
 
     ?>
     
