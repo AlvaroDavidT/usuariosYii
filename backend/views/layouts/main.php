@@ -46,8 +46,8 @@ AppAsset::register($this);
             [
                  ['label' => 'Parametrizacion','items' => 
                     [
-                     ['label' => 'Base de datos','url' => ['/subidos/model']],
-                     ['label' => 'Tag Xml','url' => ['/paramxml/index']],
+                     ['label' => 'Base de datos','url' => ['/parametrizacionbdd/index']],
+                  //   ['label' => 'Tag Xml','url' => ['/paramxml/index']],
                      ['label' => 'Envio Datos','url' => ['/parametrizacion-datos-envio/index']],
                     ]
                 ],                 

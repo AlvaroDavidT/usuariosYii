@@ -9,7 +9,9 @@ $this->title = 'Tabla de documentos pago';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="auth-assignment-index">
-
+<p>
+        <?= Html::a('Ejecutar', ['ejecutar'], ['class' => 'btn btn-success']) ?>
+</p>
 
     <h4><?= Html::encode($this->title) ?></h4>
     <hr>

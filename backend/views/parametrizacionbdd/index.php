@@ -5,54 +5,44 @@ use yii\grid\GridView;
 use yii\helpers\Url;
 use yii\bootstrap\Modal;
 use yii\widgets\Pjax;
-
-/* @var $this yii\web\View */
-/* @var $searchModel app\models\ParametrizacionDatosEnvioSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
-
-$this->title = 'Parametrizacion Datos Envios';
+//use yii\bootstrap\Alert;
+$this->title = 'Parametrizacion Base de Datos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="parametrizacion-datos-envio-index">
-
-    <h2><?= Html::encode($this->title) ?></h2>
+ <h2><?= Html::encode($this->title) ?></h2>
     <?php // echo $this->render('_search', ['model' => $searchModel]);  ?>
 
-    <p>
+ <p>
         <?=
-        Html::a('Crear', '#', [
+        Html::a('Nuevo', '#', [
             'id' => 'activity-index-link',
-            'class' => 'btn btn-primary',
+            'class' => 'btn btn-primary glyphicon glyphicon-plus-sign',
             'data-toggle' => 'modal',
             'data-target' => '#modal',
             'data-url' => Url::to(['create']),
             'data-pjax' => '0',
         ]);
         ?>
-    </p>
+</p>
 
-    <?php Pjax::begin() ?>
+<?php Pjax::begin() ?>
     <?=
     GridView::widget([
-        'id' => 'Par-grid',
+        'id' => 'Parr-grid',
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
         'showFooter' => true,
         'emptyCell' => '.',
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'DatoXml',
-            'Tabla',
-            'Campo',
-            [
-                'label' => 'Tipo',
-                'value' => function($model) {
-                    return $model->Tipo == 0 ? 'Fijo' : 'Variable';
-                },
-            ],
-            ['class' => 'yii\grid\ActionColumn',
+           'BDD',
+            'StringBDD',
+            'SchemaBDD',
+            'PasswordBDD',
+            'UserBDD',
+             ['class' => 'yii\grid\ActionColumn',
                 'headerOptions' => ['width' => '', 'label' => 'Action'],
-                'template' => '{view}{update}{delete}',
+                'template' => '{update}{delete}',
                 'buttons' => ['update' => function ($url, $model, $key) {
                         return Html::a('<span class="glyphicon glyphicon-pencil"></span>', '#', [
                                     'id' => 'activity-index-link',
@@ -65,8 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     },
                         ]
                     ],
-                ],
-            ]);
+            ]]);
             ?>
             <?php Pjax::end() ?>
             <?php
@@ -82,21 +71,22 @@ $this->params['breadcrumbs'][] = $this->title;
             }));"
             );
             ?>
-
-
-            <?php
+         <?php
             Modal::begin([
                 'id' => 'modal',
-                'header' => '<h5 class="modal-title">Complete los campos</h5>',
+                'header' => '<h4 class="modal-title">Complete los campos</h4>',
                 // 'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">Cerrar</a>',
-                'size' => 'modal-sm',
+                'size' => 'modal-m',
                 'options' => [
                     'title' => 'crear registro',
                 ]
             ]);
-            echo "<div class='well'></div>";
+           
             Modal::end();
+            
+            
+            
+                   
             ?>
-
 
 </div>
