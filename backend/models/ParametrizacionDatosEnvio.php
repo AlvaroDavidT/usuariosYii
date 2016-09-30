@@ -48,4 +48,18 @@ class ParametrizacionDatosEnvio extends \yii\db\ActiveRecord
             'Tipo' => 'Tipo',
         ];
     }
+    public static function getTablaDistinct() {
+        
+        
+       return  ParametrizacionDatosEnvio::find()->select('DISTINCT `Tabla`')->all();
+
+        
+       
+    }
+    public static function getCampos($Tabla){
+         return ParametrizacionDatosEnvio::find()
+        ->where(['=', 'Tabla', $Tabla])
+        ->all();
+    }
+
 }

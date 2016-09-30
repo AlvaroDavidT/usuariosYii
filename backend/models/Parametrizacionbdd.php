@@ -51,4 +51,6 @@ class Parametrizacionbdd extends \yii\db\ActiveRecord
             'UserBDD' => 'User Bdd',
         ];
     }
+    
+    
 }
