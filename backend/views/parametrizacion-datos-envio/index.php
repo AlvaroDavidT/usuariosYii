@@ -42,7 +42,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'DatoXml',
-            'Tabla',
             'Campo',
             [
                 'label' => 'Tipo',
@@ -50,6 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $model->Tipo == 0 ? 'Fijo' : 'Variable';
                 },
             ],
+            'Valor',
             ['class' => 'yii\grid\ActionColumn',
                 'headerOptions' => ['width' => '', 'label' => 'Action'],
                 'template' => '{view}{update}{delete}',

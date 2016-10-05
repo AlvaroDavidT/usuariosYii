@@ -56,11 +56,13 @@ class SubidosController extends Controller {
         for ($i = 0; $i <= ($count - 1); $i++) {
             $Path = $result[$i];
             foreach ($Path as $rutaXml) {
+                $Autorizacion= $this->Autorizacion($rutaXml);//obtiene la autorizacion
                 $xml = $this->leerXml($rutaXml);
                 
             //    $this->GuardarInfoFactura();
                
                 $datosXml = new DatosXml();
+                $datosXml->AutorizacionNumero=(string) $Autorizacion;// Para indicar si se creo el registro DB envio
                 $datosXml->RazonSocial = (string) $xml->comprobante->factura->infoTributaria->razonSocial;
                 $datosXml->NombreComercial = (string) $xml->comprobante->factura->infoTributaria->nombreComercial;
                 $datosXml->ruc = (string) $xml->comprobante->factura->infoTributaria->ruc;
@@ -75,7 +77,7 @@ class SubidosController extends Controller {
                 $datosXml->Tarifa = (int) $xml->comprobante->factura->infoFactura->totalConImpuestos->totalImpuesto->codigoPorcentaje;
                 $datosXml->Valor = (float) $xml->comprobante->factura->infoFactura->totalConImpuestos->totalImpuesto->valor;
                 $datosXml->ImporteTotal = (float) $xml->comprobante->factura->infoFactura->importeTotal;
-                if ($datosXml->validate()) {
+                 if ($datosXml->validate()) {
                     $datosXml->save();
                 } else {
                     throw new ForbiddenHttpException;
@@ -100,6 +102,13 @@ class SubidosController extends Controller {
         $date = str_replace('/', '-', $var);
         $conversion = date('Y-m-d', strtotime($date));
         return $conversion;
+    }
+    public function Autorizacion($rutaXml)
+    {
+        $xml = simplexml_load_file($rutaXml, null, LIBXML_NOCDATA);
+        $autorizacion = (string) $xml->numeroAutorizacion;
+        return $autorizacion;
+        
     }
 
     /*

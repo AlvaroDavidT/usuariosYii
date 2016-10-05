@@ -22,6 +22,7 @@ use Yii;
  * @property integer $Tarifa
  * @property float $Valor
  * @property float $ImporteTotal
+ * @property string $AutorizacionNumero
  */
 class DatosXml extends \yii\db\ActiveRecord
 {
@@ -40,13 +41,14 @@ class DatosXml extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['CodDocumento', 'RazonSocial', 'ruc', 'NombreComercial', 'Establecimiento','Secuencial','PuntoEmision', 'FechaEmision', 'TotalSinImpuesto', 'TotalDescuento', 'BaseImponible', 'Tarifa', 'Valor', 'ImporteTotal'], 'required'],
+            [['CodDocumento', 'RazonSocial', 'ruc', 'NombreComercial', 'Establecimiento','Secuencial','PuntoEmision', 'FechaEmision', 'TotalSinImpuesto', 'TotalDescuento', 'BaseImponible', 'Tarifa', 'Valor', 'ImporteTotal','AutorizacionNumero'], 'required'],
             [['Tarifa'], 'number'],
             [['FechaEmision'], 'safe'],
             [['TotalSinImpuesto', 'TotalDescuento', 'BaseImponible', 'Valor', 'ImporteTotal'], 'number'],
             [['CodDocumento'], 'string', 'max' => 2],
             [['RazonSocial', 'Establecimiento'], 'string', 'max' => 100],
             [['NombreComercial'], 'string', 'max' => 200],
+            [['AutorizacionNumero'],'string','max'=>50]
         ];
     }
 
@@ -71,6 +73,7 @@ class DatosXml extends \yii\db\ActiveRecord
             'ImporteTotal' => 'Importe Total',
             'PuntoEmision' => 'Punto Emision',
             'Secuencial' => 'Secuencial',
+            'AutorizacionNumero'=> 'Numero Aut.'
                               
   
         ];

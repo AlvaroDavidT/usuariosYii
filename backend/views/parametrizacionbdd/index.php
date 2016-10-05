@@ -40,6 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'SchemaBDD',
             'PasswordBDD',
             'UserBDD',
+            'Tabla',
              ['class' => 'yii\grid\ActionColumn',
                 'headerOptions' => ['width' => '', 'label' => 'Action'],
                 'template' => '{update}{delete}',

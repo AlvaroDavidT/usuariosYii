@@ -9,9 +9,9 @@ use Yii;
  *
  * @property integer $id
  * @property string $DatoXml
- * @property string $Tabla
  * @property string $Campo
  * @property integer $Tipo
+ * @property string $Valor
  */
 class ParametrizacionDatosEnvio extends \yii\db\ActiveRecord
 {
@@ -29,9 +29,10 @@ class ParametrizacionDatosEnvio extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['DatoXml', 'Tabla', 'Campo', 'Tipo'], 'required'],
+            [['DatoXml','Campo', 'Tipo','Valor'], 'required'],
             [['Tipo'], 'integer'],
-            [['DatoXml', 'Tabla', 'Campo'], 'string', 'max' => 100],
+            [['DatoXml', 'Campo'], 'string', 'max' => 100],
+            [['Valor'], 'string', 'max' => 250],
         ];
     }
 
@@ -42,10 +43,10 @@ class ParametrizacionDatosEnvio extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'DatoXml' => 'Dato Xml',
-            'Tabla' => 'Tabla',
+            'DatoXml' => 'Nombre',
             'Campo' => 'Campo',
             'Tipo' => 'Tipo',
+            'Valor'=>'Valor'
         ];
     }
     public static function getTablaDistinct() {

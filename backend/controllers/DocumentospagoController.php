@@ -3,11 +3,13 @@
 namespace backend\controllers;
 
 use backend\models\DOCUMENTOSPAGO;
+use backend\models\DbInsercion;
 use yii\data\ActiveDataProvider;
 use yii\db\Connection;
 use backend\models\Parametrizacionbdd;
 use backend\models\ParametrizacionDatosEnvio;
 use backend\models\DatosXml;
+use yii\data\SqlDataProvider;
 
 class DocumentospagoController extends \yii\web\Controller {
 
@@ -28,78 +30,91 @@ class DocumentospagoController extends \yii\web\Controller {
      */
 
     public function actionEjecutar() {
-        $obtenerDatos = DatosXml::find()->all();
-
-        foreach ($obtenerDatos as $obtenerDatos) {
-            print_r($obtenerDatos);
-        }
-        die();
-
-        foreach ($obtenerDatos as $obtenerDatos) {
-            echo'';
-        }
-
-
-//$campos = array();
-        $funcion = ParametrizacionDatosEnvio::getTablaDistinct();
-        foreach ($funcion as $Tabla) {
-            $nombreT = $Tabla->Tabla;
-            /*
-             * Hacer la consulta de campos para crear registo
-             */
+    $DatosXml = DatosXml::find()->all();
+        foreach ($DatosXml as $Fila) {
+             $miarray = array();
+            foreach ($Fila as $campo => $valor) {             
+                $campoResult = $this->CampoMapeo($campo);
+                if ($campoResult !== 0) {
+                $miarray[$campoResult] = $valor;
+                  }
+               
+            }  
+            $miarray['fijo'] = 'Valor';
+             print_r($miarray);  die();
             $db1 = $this->ConexionNewDB();
-
-            $consulCampos = ParametrizacionDatosEnvio::getCampos($nombreT);
-
-            foreach ($consulCampos as $Campo) {
-                $campod = $Campo->Campo;
-                $campos[$i] = $campod;
-
-
-                echo $i++;
-            }
-            die();
+            $db1->createCommand()->insert('Datos', $miarray)
+                ->execute();
         }
-        print_r($campo);
-
-        $db1 = $this->ConexionNewDB();
-        foreach ($funcion as $funcion) {
-            $Tabla = $funcion->Tabla;
-            $Campo = $funcion->Campo;
-
-            $Regsitros = $db1->createComand('SELECT '
-                            . $Campo
-                            . ' FROM '
-                            . $Tabla)->queryAll();
-            $db1->createCommand()->insert($Tabla, [
-                $Campo => '1245356'
-            ])->execute();
-        }
-
-
-        //print_r($funcion);
-        die();
-
-
-
-        /* $doct_unidad = 'doct_unidad';
-          $tipo = 'tipoIdentificacion';
-          $identificacion = 'identificacion';
-          $razonSocial = 'razonSocial';
-          $direccion = 'direccion';
-          $telefono = 'telefono';
-          $db1->createCommand()->insert($doct_unidad, [
-          $tipo => '1',
-          $identificacion => '0503263303',
-          $razonSocial => 'Alvaro',
-          $direccion => 'Las casas',
-          $telefono => '1245356'
-          ])->execute();
-          $prueba = $db1->createCommand('SELECT * FROM doct_unidad')
-          ->queryAll();
-          print_r($prueba);
-          die(); */
+//            die();
+//            print_r($miarray);  die();
+//                //     print_r($insercion);
+//           
+//            
+//            
+//                $TablaMapeo = ParametrizacionDatosEnvio::find()->where(['Campo' => $campo])->one();
+//                if ($TablaMapeo) { 
+//                    $miarray = array();
+//                    foreach ($TablaMapeo as $campoM => $valor2) {
+//                        if ($campo == $valor2) { 
+//                           $miarray[$campoM] = $valor;
+//                            
+//                        } 
+//                    }   print_r($miarray);  
+//                            die();  
+//                  //  $var=count($insercion);
+//                 // echo $var;
+//                                  
+//                }
+//            }
+//            
+//        
+//        $DatosXml = new SqlDataProvider([
+//            'sql' => 'SELECT * FROM DatosXml',
+//        ]);
+//        $FilaDatoXml = $DatosXml->getModels();
+//        $count = $DatosXml->getCount();
+//        for ($i = 0; $i <= ($count - 1); $i++) {
+//            $ValorFila = $FilaDatoXml[$i];
+//            print_r($ValorFila);
+//            die();
+//            foreach ($ValorFila as $NombreCampo => $valor) {
+//           // print_r($NombreCampo.$valor);
+//            $Insercion= new DbInsercion();
+//            $Insercion->campo=$NombreCampo;
+//            $Insercion->valor=$valor;          
+//                $TablaMapeo = new SqlDataProvider([
+//                    'sql' => 'SELECT Tabla FROM ParametrizacionDatosEnvio WHERE Campo=:Campo',
+//                    'params' => [':Campo' => $NombreCampo],
+//                ]);
+//                $existeTablaMapeo = $TablaMapeo->getModels();
+//                $numero = $TablaMapeo->getCount();
+//                if ($numero !== 0) {
+//                    foreach ($existeTablaMapeo[0] as $TablaBD => $TablaNewDB) {
+//                        $ValorCampo = $valor;
+//                        $Campo = $NombreCampo;
+//                        $Tabla = $TablaNewDB;
+//                        /*
+//                         * metodo para la insercion
+//                         */
+//                        $db1 = $this->ConexionNewDB();
+//                        $db1->createCommand()->insert($Tabla, [
+//                            $Campo => $ValorCampo
+//                        ])->execute();
+//                        //  echo $Tabla.$Campo.$ValorCampo;
+//                    }
+//                } else {
+//                    echo '';
+//                }
+//            }
+//            foreach ($Insercion as $inser)
+//            { echo($inser).('');
+//              
+//            }
+//                }
+//                  die();
     }
+    
 
     private function ConexionNewDB() {
 
@@ -119,6 +134,18 @@ class DocumentospagoController extends \yii\web\Controller {
             'charset' => 'utf8',
         ]);
         return $db1;
+    }
+    private function CampoMapeo($campo) {
+        $CampoMapeo = new SqlDataProvider([
+            'sql' => 'SELECT Campo FROM ParametrizacionDatosEnvio WHERE Campo=:Campo',
+            'params' => [':Campo' => $campo],
+        ]);
+        $numero = $CampoMapeo->getCount();
+        if ($numero !== 0) {
+            $result =$campo;
+            return $result;
+        }
+        return 0;
     }
 
 }

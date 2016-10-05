@@ -19,7 +19,7 @@ class ParametrizacionDatosEnvioSearch extends ParametrizacionDatosEnvio
     {
         return [
             [['id', 'Tipo'], 'integer'],
-            [['DatoXml', 'Tabla', 'Campo'], 'safe'],
+            [['DatoXml','Campo'], 'safe'],
         ];
     }
 
@@ -64,8 +64,7 @@ class ParametrizacionDatosEnvioSearch extends ParametrizacionDatosEnvio
         ]);
 
         $query->andFilterWhere(['like', 'DatoXml', $this->DatoXml])
-            ->andFilterWhere(['like', 'Tabla', $this->Tabla])
-            ->andFilterWhere(['like', 'Campo', $this->Campo]);
+              ->andFilterWhere(['like', 'Campo', $this->Campo]);
 
         return $dataProvider;
     }

@@ -28,14 +28,15 @@ use yii\widgets\ActiveForm;
             );
     ?>
      <?= $form->field($model, 'DatoXml')->textInput(['maxlength' => true]) ?>
-    <p class="text-warning text-center " id="Nota" style='display:none;'><strong>NOTA: !!Seleccionaste variable completar con nombres de Tagxml!!</strong></p>
   <!--
      $form->field($model, 'DatoXml')->dropDownList($var,['id'=>'ver1'],
             ['prompt'=>'Seleccione una opcion'])*/ -->
    
-    <?= $form->field($model, 'Tabla')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'Campo')->textInput(['maxlength' => true]) ?>
-
+   <p class="text-warning text-center " id="Nota" style='display:none;'><strong>NOTA: !!Seleccionaste variable completar el valor con nombres de Tagxml!!</strong></p>
+ 
+    <?= $form->field($model, 'Valor')->textInput(['maxlength' => true]) ?> 
+    
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
