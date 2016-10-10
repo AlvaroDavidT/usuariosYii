@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+    
 }
 
 .wrap {
@@ -8,11 +9,16 @@ body {
     height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
+    background:#ddd;
 }
 
 .wrap > .container {
     padding: 70px 15px 20px;
-   
+
+}
+.wrap > .container > .col-sm-8 {
+    padding: 10px 15px 20px;
+   background: #a94442;
 }
 
 .footer {
@@ -109,4 +115,26 @@ a.desc:after {
 
 .nav > li > form > button:hover {
     text-decoration: none;
+}
+.site-login{
+    background:activecaption;
+    padding: 10px 20px;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 10px;
+}
+.site-login >.row{
+    padding-top: 20px;
+    background:#fff; 
+    border-radius: 10px;
+}
+
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;	
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
 }

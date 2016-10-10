@@ -19,15 +19,17 @@ $this->params['breadcrumbs'][] = $this->title;
     <?=
     GridView::widget([
         'dataProvider' => $dataProvider,
+          // 'htmlOptions'=>array('width'=>'40'),
         'columns' => [
+            
             ['class' => 'yii\grid\SerialColumn'],
-            [
-                'attribute' => 'an_attributeid',
-                'label' => 'Union',
-                'value' => function($model) {
-                    return $model->Establecimiento . '-' . $model->PuntoEmision . '-' . $model->Secuencial;
-                },
-            ],
+//            [
+//                'attribute' => 'an_attributeid',
+//                'label' => 'Union',
+//                'value' => function($model) {
+//                    return $model->Establecimiento . '-' . $model->PuntoEmision . '-' . $model->Secuencial;
+//                },
+//            ],
             'RazonSocial',
             'ruc',
             'FechaEmision',
@@ -37,6 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             
         //['class' => 'yii\grid\ActionColumn'],
         ],
+    
     ]);
     ?>
 </div>

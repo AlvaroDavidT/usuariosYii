@@ -19,6 +19,7 @@ use yii\web\UploadedFile;
  */
 class SiteController extends Controller
 {
+   
     /**
      * @inheritdoc
      */
@@ -71,9 +72,17 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionIndex()
-    {
-        return $this->render('index');
+    
+   
+    public function actionIndex() {
+       
+
+        if (Yii::$app->user->isGuest) {
+            return $this->render('index');
+            // return $this->goHome();
+        } else {
+            return $this->redirect(['site/home']);
+        }
     }
 
     /**
@@ -81,39 +90,32 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
+    public function actionLogin() {
 
+        $this->layout = 'loginLayout';
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            
-          $model = new SubirArchivosForm;
-        $msg = null;
-        if ($model->load(Yii::$app->request->post())) 
-        {
-            $model->file = UploadedFile::getInstances($model, 'file');
-            if ($model->file && $model->validate()) {
-                foreach ($model->file as $file) {
-                    $file->saveAs('archivos/' . $file->baseName . '.' . $file->extension);
-                    $msg = "<p><strong class='label label-info'>Enhorabuena, subida realizada con éxito</strong></p>";
-                }
+        if ($model->load(Yii::$app->request->post())) {//prueba si esta logeado
+            $model->login();
+            if (Yii::$app->user->isGuest) {
+                return $this->render('login', [
+                            'model' => $model,
+                ]);
+            } else {
+                return $this->redirect(['site/home']);
             }
-        }
-        return $this->render("SubirXml", ["model" => $model, "msg" => $msg]);
-            
-            
-            
-           
         } else {
             return $this->render('login', [
-                'model' => $model,
+                        'model' => $model,
             ]);
         }
     }
 
+    public function actionHome()
+    {
+         $this->layout='archivosLayout';
+        return $this->render('home');
+    }
+   
     /**
      * Logs out the current user.
      *
@@ -121,9 +123,10 @@ class SiteController extends Controller
      */
     public function actionLogout()
     {
+     // Yii::$app->cache->flush();
         Yii::$app->user->logout();
-
         return $this->goHome();
+       
     }
 
     /**
@@ -158,6 +161,7 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+   
 
     /**
      * Signs user up.
@@ -166,6 +170,7 @@ class SiteController extends Controller
      */
     public function actionSignup()
     {
+        
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {

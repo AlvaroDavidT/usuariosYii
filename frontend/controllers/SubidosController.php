@@ -1,14 +1,14 @@
 <?php
 
-namespace backend\controllers;
+namespace frontend\controllers;
 use Yii;
 use yii\web\Controller;
-use backend\models\Archivos;
-use backend\models\DatosXml;
+use frontend\models\Archivos;
+use frontend\models\DatosXml;
 use yii\filters\VerbFilter;
 use yii\data\ActiveDataProvider;
 use yii\data\SqlDataProvider;
-use backend\models\Paramxml;
+use frontend\models\Paramxml;
 
 /**
  * ParametrizacionController implements the CRUD actions for Parametrizacion model.
@@ -35,6 +35,7 @@ class SubidosController extends Controller {
      * @return mixed
      */
     public function actionIndex() {
+         $this->layout='archivosLayout';
         $dataProvider = new ActiveDataProvider([
             'query' => Archivos::find(),
             'pagination' => array('pageSize' => 2),
@@ -53,6 +54,7 @@ class SubidosController extends Controller {
         ]);
         $result = $ConsultaPath->getModels();
         $count = $ConsultaPath->getCount();
+       
         for ($i = 0; $i <= ($count - 1); $i++) {
             $Path = $result[$i];
             foreach ($Path as $rutaXml) {
@@ -85,8 +87,11 @@ class SubidosController extends Controller {
                 }
             }
         }
+         if($count !=0){
+            $this->UpdateEstado();
+         }
        
-        $this->UpdateEstado();
+        
         $this->redirect(array('subidos/index'));
     }
 
@@ -117,6 +122,7 @@ class SubidosController extends Controller {
      */
 
     public function actionDatosxml() {
+         $this->layout='archivosLayout';
         $dataProvider = new ActiveDataProvider([
             'query' => DatosXml::find(),
             'pagination' => array('pageSize' => 2),
