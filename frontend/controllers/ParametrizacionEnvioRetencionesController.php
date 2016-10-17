@@ -3,8 +3,8 @@
 namespace frontend\controllers;
 
 use Yii;
-use frontend\models\ParametrizacionDatosEnvio;
-use app\models\ParametrizacionDatosEnvioSearch;
+use frontend\models\ParametrizacionEnvioRetenciones;
+use app\models\ParametrizacionEnvioRetencionesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 /**
  * ParametrizacionDatosEnvioController implements the CRUD actions for ParametrizacionDatosEnvio model.
  */
-class ParametrizacionDatosEnvioController extends Controller
+class ParametrizacionEnvioRetencionesController extends Controller
 {
     /**
      * @inheritdoc
@@ -41,7 +41,7 @@ class ParametrizacionDatosEnvioController extends Controller
             $this->goHome();
         } else {
             $this->layout = 'archivosLayout';
-            $searchModel = new ParametrizacionDatosEnvioSearch();
+            $searchModel = new ParametrizacionEnvioRetencionesSearch();
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
             $dataProvider->pagination->pageSize = 5;
             return $this->render('index', [
@@ -71,7 +71,7 @@ class ParametrizacionDatosEnvioController extends Controller
      */
    public function actionCreate($submit = false) {
 
-        $model = new ParametrizacionDatosEnvio();
+        $model = new ParametrizacionEnvioRetenciones();
         if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post()) && $submit == false) {
             Yii::$app->response->format = Response::FORMAT_JSON;
             return ActiveForm::validate($model);
@@ -149,7 +149,7 @@ class ParametrizacionDatosEnvioController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = ParametrizacionDatosEnvio::findOne($id)) !== null) {
+        if (($model = ParametrizacionEnvioRetenciones::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

@@ -10,7 +10,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\models\ParametrizacionDatosEnvioSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Parametrizacion Datos Envio';
+$this->title = 'Parametrizacion Datos Retenciones';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="parametrizacion-datos-envio-index">
@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
        // 'emptyCell' => '.',
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'DatoXml',
+            'Nombre',
             'Campo',
             [
                 'label' => 'Tipo',

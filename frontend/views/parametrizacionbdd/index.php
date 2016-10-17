@@ -9,30 +9,34 @@ use yii\widgets\Pjax;
 $this->title = 'Parametrizacion Base de Datos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="parametrizacion-datos-envio-index">
- <h2><?= Html::encode($this->title) ?></h2>
-    <?php // echo $this->render('_search', ['model' => $searchModel]);  ?>
+<div class="auth-assignment-index">
+   
 
- <p>
-        <?=
+  
+    
+        <div class="well well-sm text-right">
+          <?=
         Html::a('Nuevo', '#', [
             'id' => 'activity-index-link',
-            'class' => 'btn btn-primary glyphicon glyphicon-plus-sign',
+            'class' => 'btn btn-primary',
             'data-toggle' => 'modal',
             'data-target' => '#modal',
             'data-url' => Url::to(['create']),
             'data-pjax' => '0',
         ]);
         ?>
-</p>
-
+        </div>    
+  
 <?php Pjax::begin() ?>
+    
+<div class="jumbotron">
+ 
     <?=
     GridView::widget([
         'id' => 'Parr-grid',
         'dataProvider' => $dataProvider,
-        'showFooter' => true,
-        'emptyCell' => '.',
+       // 'showFooter' => true,
+       // 'emptyCell' => '.',
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
            'BDD',
@@ -41,6 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'PasswordBDD',
             'UserBDD',
             'Tabla',
+            'TipoDocumento',
              ['class' => 'yii\grid\ActionColumn',
                 'headerOptions' => ['width' => '', 'label' => 'Action'],
                 'template' => '{update}{delete}',
@@ -56,9 +61,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     },
                         ]
                     ],
+            
             ]]);
-            ?>
+            ?> 
             <?php Pjax::end() ?>
+    </div>
             <?php
             $this->registerJs(
                     "$(document).on('click', '#activity-index-link', (function() {
@@ -89,5 +96,12 @@ $this->params['breadcrumbs'][] = $this->title;
             
                    
             ?>
+  
+
+     
+        
+    <?php // echo $this->render('_search', ['model' => $searchModel]);  ?>
+  
+
 
 </div>

@@ -13,6 +13,7 @@ use Yii;
  * @property string $SchemaBDD
  * @property string $PasswordBDD
  * @property string $UserBDD
+ * @property String $TipoDocumento
  * @property String $Tabla
  */
 class Parametrizacionbdd extends \yii\db\ActiveRecord
@@ -31,11 +32,11 @@ class Parametrizacionbdd extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['BDD', 'StringBDD', 'SchemaBDD', 'PasswordBDD', 'UserBDD','Tabla'], 'required'],
+            [['BDD', 'StringBDD', 'SchemaBDD', 'PasswordBDD', 'UserBDD','Tabla','TipoDocumento'], 'required'],
             [['BDD', 'SchemaBDD'], 'string', 'max' => 100],
             [['StringBDD'], 'string', 'max' => 250],
             [['PasswordBDD', 'UserBDD','Tabla'], 'string', 'max' => 50],
-            
+            [['TipoDocumento'], 'string', 'max' => 25],
         ];
     }
 
@@ -47,11 +48,12 @@ class Parametrizacionbdd extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'BDD' => 'Bdd',
-            'StringBDD' => 'String  Bdd',
-            'SchemaBDD' => 'Schema  Bdd',
-            'PasswordBDD' => 'Password Bdd',
-            'UserBDD' => 'User Bdd',
+            'StringBDD' => 'String',
+            'SchemaBDD' => 'Formato',
+            'PasswordBDD' => 'Password',
+            'UserBDD' => 'Usuario',
             'Tabla'=>'Tabla',
+            'TipoDocumento'=>'Documento'
         ];
     }
     

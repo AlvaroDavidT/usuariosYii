@@ -37,6 +37,9 @@ class SubirController extends Controller {
      * @return mixed
      */
     public function actionSubirxml() {
+         if (Yii::$app->user->isGuest) {
+              $this->goHome();
+          }  else {
         $this->layout='archivosLayout';
         if (Yii::$app->user->can('subirArchivos')) {
             $model = new SubirForm;
@@ -76,10 +79,12 @@ class SubirController extends Controller {
                     }
                 }
             }
-            return $this->render("index", ["model" => $model, "msg" => $msg]);
+             Yii::$app->session->setFlash('success', $msg);
+            return $this->render("index", ["model" => $model]);
         } else {
             throw new ForbiddenHttpException;
         }
+    }
     }
 
 }

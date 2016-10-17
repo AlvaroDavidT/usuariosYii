@@ -18,7 +18,7 @@ class SubirForm extends model {
                 'minSize' => 10, //10 Bytes
                 'tooSmall' => 'El tamaño mínimo permitido son 10 BYTES', //Error
                 'extensions' => 'xml',
-                'maxFiles' => 20,
+                'maxFiles' => 200,
                 'wrongExtension' => 'El archivo {file} no contiene una extensión permitida {extensions}', //Error
               
             ],

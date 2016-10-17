@@ -23,7 +23,7 @@ AppArchivos::register($this);
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
-    <body class="prueba">
+    <body>
         <?php $this->beginBody() ?>
 
         <div class="wrap">
@@ -46,7 +46,6 @@ AppArchivos::register($this);
                 ];
             } else {
                 $menuItems = [
-                  
                 ];
                 $menuItems[] = '<li>'
                         . Html::beginForm(['/site/logout'], 'post')
@@ -63,65 +62,71 @@ AppArchivos::register($this);
             ]);
             NavBar::end();
             ?>
-          
+
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3 ">
- 
-  <div class="panel panel-default">
-      <div class="panel-heading text-center"><h4>Menu Principal</h4></div>
-    <div class="panel-body">
-        <?=
-                   Collapse::widget([
-                                        'items' => [
-                                            // equivalent to the above
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading text-center"><h4>Menu Principal</h4></div>
+                            <div class="panel-body">
+                                <?=
+                                Collapse::widget([
+                                    'items' => [
+                                        // equivalent to the above
+                                        [
+                                            'label' => 'Acciones con archivos',
+                                            'content' => [
+                                                BaseHtml::a('<span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> Subir Archivos', Url::to(['/subir/subirxml']), ['class' => 'list-group-item']),
+                                                BaseHtml::a('<span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Archivos Subidos ', Url::to(['/subidos/index']), ['class' => 'list-group-item']),
+                                                BaseHtml::a('<span class="glyphicon glyphicon-list" aria-hidden="true"></span> Facturas ', Url::to(['/subidos/facturas']), ['class' => 'list-group-item']),
+                                                BaseHtml::a('<span class="glyphicon glyphicon-list" aria-hidden="true"></span> Retenciones ', Url::to(['/subidos/retenciones']), ['class' => 'list-group-item'])
+                                        
+                                                ],
+                                            // open its content by default
+                                            'contentOptions' => ['class' => 'in']
+                                        ],
+                                        // another group item
+                                        [
+                                            'label' => 'Parametrizaciones',
+                                            'content' =>
                                             [
-                                                'label' => 'Acciones con archivos',
-                                                'content' => [
-                                                BaseHtml::a('<span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> Subir Archivos', Url::to(['/subir/subirxml']), ['class'=>'list-group-item']),
-                                                BaseHtml::a('<span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Procesar Archivos ', Url::to(['/subidos/index']), ['class'=>'list-group-item']),
-                                                BaseHtml::a('<span class="glyphicon glyphicon-search" aria-hidden="true"></span> Visualizar Archivos ', Url::to(['/subidos/datosxml']), ['class'=>'list-group-item'])
+                                                BaseHtml::a('<span class="glyphicon glyphicon-wrench"></span> Base de Datos', Url::to(['/parametrizacionbdd/index']), ['class' => 'list-group-item']),
+                                                BaseHtml::a('<span class="glyphicon glyphicon-random" aria-hidden="true"></span> Datos Facturas', Url::to(['/parametrizacion-datos-envio/index']), ['class' => 'list-group-item']),
+                                                BaseHtml::a('<span class="glyphicon glyphicon-random" aria-hidden="true"></span> Datos Retenciones', Url::to(['/parametrizacion-envio-retenciones/index']), ['class' => 'list-group-item'])
+                                        
+                                                ],
+                                            'contentOptions' => ['class' => 'collapsing',],
+                                            'options' => ['style' => 'text-color: red'],
+                                        ],
+                                        // if you want to swap out .panel-body with .list-group, you may use the following
+                                        [
+                                            'label' => 'Permisos a usuarios',
+                                            'content' => [
+                                                 BaseHtml::a('<span class="glyphicon glyphicon-user"></span> Lista Usuarios', Url::to(['/parametrizacionbdd/index']), ['class' => 'list-group-item']),
+                                                 BaseHtml::a('<span class="glyphicon glyphicon-wrench"></span> Base de Datos', Url::to(['/parametrizacionbdd/index']), ['class' => 'list-group-item']),
                                               
-                                                    ],
-                                                // open its content by default
-                                                'contentOptions' => ['class' => 'in']
                                             ],
-                                            // another group item
-                                            [
-                                                'label' => 'Parametrizaciones',
-                                                'content' => 
-                                                [
-                                                  BaseHtml::a('<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Base de Datos', Url::to(['/parametrizacionbdd/index']), ['class'=>'list-group-item']),
-                                                BaseHtml::a('<span class="glyphicon glyphicon-send" aria-hidden="true"></span> Datos Envio', Url::to(['/parametrizacion-datos-envio/index']), ['class'=>'list-group-item'])
-                                                
-                                                ],
-                                                'contentOptions' => ['class' => 'collapsing',],
-                                                'options' => ['style'=>'text-color: red'],
-                                            ],
-                                            // if you want to swap out .panel-body with .list-group, you may use the following
-                                            [
-                                                'label' => 'Permisos a usuarios',
-                                                'content' => [
-                                                    'Anim pariatur cliche...',
-                                                    'Anim pariatur cliche...'
-                                                ],
-                                                'contentOptions' => [],
-                                                'options' => [],
-                                                //'footer' => 'Footer' // the footer label in list-group
-                                            ],
-                                        ]
-                                    ]);                                    
-            ?>
-        </div>
-  </div>                 
+                                            'contentOptions' => [],
+                                            'options' => [],
+                                        //'footer' => 'Footer' // the footer label in list-group
+                                        ],
+                                    ]
+                                ]);
+                                ?>
+                            </div>
+                        </div>                 
                     </div>
                     <div class="col-sm-9">
-                        <?=
+                       
+                           <?=
                         Breadcrumbs::widget([
                             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                         ])
                         ?>
-                        <?= $content ?>
+                        <?= $content ?> 
+                       
+                        
                     </div>
                 </div>
             </div>

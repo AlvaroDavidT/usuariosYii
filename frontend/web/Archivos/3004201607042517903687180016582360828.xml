@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>3004201607042517903687180016582360828</numeroAutorizacion>
+<fechaAutorizacion>2016-04-30T07:04:25-05:00</fechaAutorizacion>
+<ambiente>PRODUCCIÓN</ambiente>
+<comprobante><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<comprobanteRetencion id="comprobante" version="1.0.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>BANCO DE LA PRODUCCION S.A. PRODUBANCO</razonSocial>
+    <nombreComercial>BANCO DE LA PRODUCCION S.A. PRODUBANCO</nombreComercial>
+    <ruc>1790368718001</ruc>
+    <claveAcceso>2904201607179036871800120010120003122000023804917</claveAcceso>
+    <codDoc>07</codDoc>
+    <estab>001</estab>
+    <ptoEmi>012</ptoEmi>
+    <secuencial>000312200</secuencial>
+    <dirMatriz>AV AMAZONAS N35 211 Y JAPON</dirMatriz>
+  </infoTributaria>
+  <infoCompRetencion>
+    <fechaEmision>29/04/2016</fechaEmision>
+    <dirEstablecimiento>AV AMAZONAS N35 211 Y JAPON</dirEstablecimiento>
+    <contribuyenteEspecial>5368</contribuyenteEspecial>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionSujetoRetenido>04</tipoIdentificacionSujetoRetenido>
+    <razonSocialSujetoRetenido>DYGOIL CONSULTORIA Y SERVICIOS PETROLEROS CIA.LTDA.</razonSocialSujetoRetenido>
+    <identificacionSujetoRetenido>1790802736001</identificacionSujetoRetenido>
+    <periodoFiscal>04/2016</periodoFiscal>
+  </infoCompRetencion>
+  <impuestos>
+    <impuesto>
+      <codigo>1</codigo>
+      <codigoRetencion>323B1</codigoRetencion>
+      <baseImponible>9.06</baseImponible>
+      <porcentajeRetener>2.00</porcentajeRetener>
+      <valorRetenido>0.18</valorRetenido>
+      <codDocSustento>00</codDocSustento>
+    </impuesto>
+  </impuestos>
+  <infoAdicional>
+    <campoAdicional nombre="Email">groman@dygoil.com</campoAdicional>
+    <campoAdicional nombre="Ref">12005589318</campoAdicional>
+  </infoAdicional>
+<ds:Signature Id="Signature-a1ae9fad-c5b2-4328-90ff-5afc0ba82b7f" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><ds:Reference Id="Reference-6bd0dc41-39a0-4916-a212-6e41520915ee" URI="#comprobante"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><ds:DigestValue>qTfRsqQdAst/2Q5uvm5+86wgMGw=</ds:DigestValue></ds:Reference><ds:Reference Id="ReferenceKeyInfo" URI="#KeyInfoId-Signature-a1ae9fad-c5b2-4328-90ff-5afc0ba82b7f"><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><ds:DigestValue>+/ToQVJlXl8qDYSqkWc5agExOY8=</ds:DigestValue></ds:Reference><ds:Reference URI="#SignedProperties-Signature-a1ae9fad-c5b2-4328-90ff-5afc0ba82b7f" Type="http://uri.etsi.org/01903#SignedProperties"><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><ds:DigestValue>iyd9qVMbVkwcitb4ml6l39+jOAY=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="SignatureValue-455d4f3e-1759-4ddb-b88c-83018e34d483">FhX9a3f2VCbD06VlwoSgJzKoKoEK4Nc/MEMldwMvylO3aWoUUvGLqXhfaCUatnvuUQTgQkgBbxB0apNlNhDnFpiEXk36vcEYi9gZckHV/cJ9n38hSDoEQ+b9vM/VlXHrFPTU3f0AmBWMp5i/xEU8ni/8yZ8FI3mpEprenga+cEFnYpE1G8LzCY7sEx2XjEwXtX9a7P3QYMpsKDGfcfc/TciPIlwrLtmitcS9pBGLc0Tv0Hb8PYh7UCeXOQPZ0E/3RETpzeB43P5K8ImCg0shh57Kh58KLerUrHYS/VScAqRK27H94M9/1DZh/6RmqXivXbnNU903I13eSOugN71Xfg==</ds:SignatureValue><ds:KeyInfo Id="KeyInfoId-Signature-a1ae9fad-c5b2-4328-90ff-5afc0ba82b7f"><ds:X509Data><ds:X509Certificate>MIIJ9TCCB92gAwIBAgIETkTnPDANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNVBAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxBQyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE1MDcxNDE4MjA1MVoXDTE4MDcxNDE4NTA1MVowgbcxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcwNQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4wDAYDVQQHEwVRVUlUTzE7MBEGA1UEBRMKMDAwMDEyNDk4NDAmBgNVBAMTH0NMQVVESUEgQ0FST0xJTkEgUE9OQ0UgSU5UUklBR08wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4MBaJNmwnj9NJgFr36HEEsFoC1JYiayV5Pf+dooZkJc0ANRoh2xqo7ODomBu+xRFOXfBhRoo7GZFH/78EdXWtBRTVGcxWDjQfdFA9a3zESmSfiKM6fvjithO/TGWUVBGGdZemc6pWHSd+qHGPuwkVCfr7b9sKrqL2C7InzWZ0KrFAxUdYO5msKEtOm9vZleEqpiY8R0YlwRtFdLykCJdmTxEOiiCENJqiPfY7HkoNX1gJEV0nA/Nfr4p8y6hrOJz7gBbAM2g79OA9TrMbgA/FwJxsqtlI1AJPzq3G2CpYMkqQsLw7qkQ2d7YmL21p+4FC+dsE8oHg78MoZXAAgcXHAgMBAAGjggUbMIIFFzALBgNVHQ8EBAMCB4AwZwYDVR0gBGAwXjBcBgsrBgEEAYKoOwICATBNMEsGCCsGAQUFBwIBFj9odHRwOi8vd3d3LmVjaS5iY2UuZWMvcG9saXRpY2EtY2VydGlmaWNhZG8vcGVyc29uYS1qdXJpZGljYS5wZGYwgZEGCCsGAQUFBwEBBIGEMIGBMD4GCCsGAQUFBzABhjJodHRwOi8vb2NzcC5lY2kuYmNlLmVjL2VqYmNhL3B1YmxpY3dlYi9zdGF0dXMvb2NzcDA/BggrBgEFBQcwAYYzaHR0cDovL29jc3AxLmVjaS5iY2UuZWMvZWpiY2EvcHVibGljd2ViL3N0YXR1cy9vY3NwMDQGCisGAQQBgqg7AwoEJhMkQkFOQ08gREUgTEEgUFJPRFVDQ0lPTiBTQSBQUk9EVUJBTkNPMB0GCisGAQQBgqg7AwsEDxMNMTc5MDM2ODcxODAwMTAaBgorBgEEAYKoOwMBBAwTCjEzMDk2MzAzMTUwIAYKKwYBBAGCqDsDAgQSExBDTEFVRElBIENBUk9MSU5BMBUGCisGAQQBgqg7AwMEBxMFUE9OQ0UwGAYKKwYBBAGCqDsDBAQKEwhJTlRSSUFHTzAaBgorBgEEAYKoOwMFBAwTClNVQkdFUkVOVEUwKgYKKwYBBAGCqDsDBwQcExpBViBBTUFaT05BUyBOMzUyMTEgWSBKQVBPTjAZBgorBgEEAYKoOwMIBAsTCTAyMjk5OTAwMDAVBgorBgEEAYKoOwMJBAcTBVF1aXRvMBcGCisGAQQBgqg7AwwECRMHRUNVQURPUjAcBgorBgEEAYKoOwMzBA4TDEhBUkRXQVJFLUhTTTAgBgNVHREEGTAXgRVwb25jZWFAcHJvZHViYW5jby5jb20wggHfBgNVHR8EggHWMIIB0jCCAc6gggHKoIIBxoaB1WxkYXA6Ly9iY2VxbGRhcHN1YnAxLmJjZS5lYy9jbj1DUkwyNDQsY249QUMlMjBCQU5DTyUyMENFTlRSQUwlMjBERUwlMjBFQ1VBRE9SLGw9UVVJVE8sb3U9RU5USURBRCUyMERFJTIwQ0VSVElGSUNBQ0lPTiUyMERFJTIwSU5GT1JNQUNJT04tRUNJQkNFLG89QkFOQ08lMjBDRU5UUkFMJTIwREVMJTIwRUNVQURPUixjPUVDP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFzZYY0aHR0cDovL3d3dy5lY2kuYmNlLmVjL0NSTC9lY2lfYmNlX2VjX2NybGZpbGVjb21iLmNybKSBtTCBsjELMAkGA1UEBhMCRUMxIjAgBgNVBAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxBQyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMQ8wDQYDVQQDEwZDUkwyNDQwKwYDVR0QBCQwIoAPMjAxNTA3MTQxODIwNTFagQ8yMDE4MDcxNDE4NTA1MVowHwYDVR0jBBgwFoAUGPnw++YyHJlmOSrKi7JpfUknv84wHQYDVR0OBBYEFPNV8K3sZJPTbOc+PivlKer5ttswMAkGA1UdEwQCMAAwGQYJKoZIhvZ9B0EABAwwChsEVjguMQMCBLAwDQYJKoZIhvcNAQELBQADggIBAAT8tDgU5Me3eEcgVpiireW8XhYzyzgxuvSG0jkEwoxDjCCxW/8OhQNR8EYvrBK/hoY3kn95TGDwc6MrdS+STnEliAR7BTS/0CiQWvyQdbkVK1zBQPVvMve0p1CHoowGBY59yeWhIpFz5NHE40YLjaZ1Ce3PuxpZe86klVI35zuOOMXKSuTTubFLa4D/DdkafV/Qu+zVLUXpCAwTXwdpddPB7NeVBFXtsSH9o9mUmqEe/09b9Iyrh3Tajs9wr7HA/TqrpayxI2kffdgl8PM1g6mLfoD1kXZKegKijV3wyTdVgU54o61lQ02KWM0y3ZYCaYgzEp11b19BfkFMZx3VhiBk+EK4J/13XTTd4BoOz+5j4WR4s1KCEcD2UKbypzZelKMW8olAH+/kTcjEVLlS1cAW4J/stqjBkBlAmXiR0DYXX4wBcdbM+zUfD0oJPuattvy80DlkjDuSIE2mDtdy3LDIyHsCkx9a6kaoxzuFm+xvix0TaRah7Aoku25LnhF36DWNewNzd3eCQtuJwtXoC9vlzZXATMbkbde4d1D9x1shcftJa6cL4l1u/0EkowcQicjVGrFPbJvvxy5O/A5xCL2M8o108Mwl3c/UbREevCagwYE/oFfzvOqAfMnQwRjyNLR/hokR8oy7L906SzSmoJtQ27ywFOlS/5pFcM8dmym1</ds:X509Certificate></ds:X509Data><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>uDAWiTZsJ4/TSYBa9+hxBLBaAtSWImsleT3/naKGZCXNADUaIdsaqOzg6JgbvsURTl3wYUaKOxmRR/+/BHV1rQUU1RnMVg40H3RQPWt8xEpkn4ijOn744rYTv0xllFQRhnWXpnOqVh0nfqhxj7sJFQn6+2/bCq6i9guyJ81mdCqxQMVHWDuZrChLTpvb2ZXhKqYmPEdGJcEbRXS8pAiXZk8RDooghDSaoj32Ox5KDV9YCRFdJwPzX6+KfMuoazic+4AWwDNoO/TgPU6zG4APxcCcbKrZSNQCT86txtgqWDJKkLC8O6pENne2Ji9tafuBQvnbBPKB4O/DKGVwAIHFxw==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue></ds:KeyInfo><ds:Object Id="XadesObjectId-e3438365-45e1-4d02-99d5-0b59cd72ff73"><xades:QualifyingProperties Id="QualifyingProperties-d99ef0c0-f141-4284-84c7-0a82ed63127b" Target="#Signature-a1ae9fad-c5b2-4328-90ff-5afc0ba82b7f"><xades:SignedProperties Id="SignedProperties-Signature-a1ae9fad-c5b2-4328-90ff-5afc0ba82b7f"><xades:SignedSignatureProperties><xades:SigningTime>2016-04-30T12:04:24</xades:SigningTime><SigningCertificate xmlns="http://uri.etsi.org/01903/v1.3.2#"><xades:Cert xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><xades:CertDigest xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><ds:DigestValue xmlns:xades="http://uri.etsi.org/01903/v1.3.2#">rTduX9dvCK5eDDFvjDxVilr02Oc=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:X509IssuerName xmlns:xades="http://uri.etsi.org/01903/v1.3.2#">CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber xmlns:xades="http://uri.etsi.org/01903/v1.3.2#">1313138492</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></SigningCertificate></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></comprobanteRetencion>]]></comprobante>
+<mensajes/>
+</autorizacion>
+

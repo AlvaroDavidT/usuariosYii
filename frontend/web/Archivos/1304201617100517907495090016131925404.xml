@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>1304201617100517907495090016131925404</numeroAutorizacion>
+<fechaAutorizacion>2016-04-13T17:10:05-05:00</fechaAutorizacion>
+<ambiente>PRODUCCIÓN</ambiente>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<comprobanteRetencion id="comprobante" version="1.0.0"><infoTributaria><ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>Andes Petroleum Ecuador Ltd</razonSocial><nombreComercial>Andes Petroleum Ecuador Ltd</nombreComercial><ruc>1790749509001</ruc><claveAcceso>1304201607179074950900120010060000088406000282413</claveAcceso><codDoc>07</codDoc><estab>001</estab><ptoEmi>006</ptoEmi><secuencial>000008840</secuencial><dirMatriz>Naciones Unidas E1044 y Republica de El Salvador</dirMatriz></infoTributaria><infoCompRetencion><fechaEmision>13/04/2016</fechaEmision><dirEstablecimiento>R l Salvador 309 Y Suiza </dirEstablecimiento><contribuyenteEspecial>5368</contribuyenteEspecial><obligadoContabilidad>SI</obligadoContabilidad><tipoIdentificacionSujetoRetenido>04</tipoIdentificacionSujetoRetenido><razonSocialSujetoRetenido>Dygoil Consultoria y Servicios Petrolero</razonSocialSujetoRetenido><identificacionSujetoRetenido>1790802736001</identificacionSujetoRetenido><periodoFiscal>04/2016</periodoFiscal></infoCompRetencion><impuestos><impuesto><codigo>1</codigo><codigoRetencion>344</codigoRetencion><baseImponible>33000.05</baseImponible><porcentajeRetener>2.00</porcentajeRetener><valorRetenido>660.00</valorRetenido><codDocSustento>01</codDocSustento><numDocSustento>001001000000592</numDocSustento><fechaEmisionDocSustento>08/04/2016</fechaEmisionDocSustento></impuesto><impuesto><codigo>2</codigo><codigoRetencion>10</codigoRetencion><baseImponible>3960.01</baseImponible><porcentajeRetener>20.00</porcentajeRetener><valorRetenido>792.00</valorRetenido><codDocSustento>01</codDocSustento><numDocSustento>001001000000592</numDocSustento><fechaEmisionDocSustento>08/04/2016</fechaEmisionDocSustento></impuesto></impuestos><infoAdicional><campoAdicional nombre="Direccion Proveedor">R l Salvador 309 Y Suiza</campoAdicional> <campoAdicional nombre="Telefono Proveedor">0 440 316/9</campoAdicional> <campoAdicional nombre="Email Proveedor">nmazon@dygoil.com</campoAdicional> </infoAdicional><ds:Signature Id="Signature760267" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#">
+<ds:SignedInfo Id="Signature-SignedInfo945054">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID1029685" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature760267-SignedProperties523921">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>F+Y3p3XjJ643SutnXhkVPmNvDLA=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1670886">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>z2pZlq2224wNmnLc7sNGSEC7K18=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-590232" URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>MvZzYagQ+02GxV84QaTMV7JGVGs=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-855743" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>MvZzYagQ+02GxV84QaTMV7JGVGs=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue674124">
+fAbBlbUXn0Vlc7onyMQABWbrneoE4XQgGlr0XfKfdHakmCON5nUYL/QkAoc0nTDrcSeRDBzA9JNG
+tcj/6xfmTapTCg9EzQYC34hpiPREAYRss30Y8s3vhfFVk8FWdgGzvUdPhoatwh0EEyXUnbIZwAVs
+aGg6zGR7CRC8tqf8Y+7XBMz2n1XrwawvvlQfXDJo5qjTaQc792Nl37gHrvCQXw2i/8AL+f5w42Io
+ifibI33twtEm84hfV02sOkLlcdVg6EnX+Za8p7rJcQ4IKqQHAv806VSECfWUjglYw7+ld7mWCm3v
+OTQ5VDMb9rBbiqmHWTpXaN6ESPcj+fbWS8C+MQ==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1670886">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJlDCCB3ygAwIBAgIETkVP4zANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE1MTAwNzE1MzExN1oXDTE2MTAwNzE2MDEx
+N1owgbExCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE1MBEGA1UEBRMKMDAwMDA4NjY3OTAgBgNVBAMTGUFOR0VMIEVEVUFSRE8g
+RElBWiBGTE9SRVMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC9pAW2NSzaHsuirqdF
+ux4HBCAR08ib9t7XhWyQI4ft94FWWpPcwIYvZXb/7Ml5WUwX4f+zdTxlJog1JFYj0ra9JORec/AS
+wnOcbWwIQ9qgxiU7inXgU4VdaepOWgCJ1oPw30oYQ1PNzU5ICggNT5+rFtK+e6hbDQXaU/AFWOZ4
+8aF6EbtKznmPcsYdquH/IrQGAKT/7rNeJRVySwjt+B7dh6tLIMFhg7cXVMeaQXWdkZDr7qkchGIb
+kb6TIgk9SPeRK8Wfq8SLkRB2+c169vEABmTHTrlWDyqEwJJtT4YgDmM0ppSJRAb8DhZng8Ley8yq
+HTA3vViXbKEcOaaPuomhAgMBAAGjggTAMIIEvDCBkQYIKwYBBQUHAQEEgYQwgYEwPgYIKwYBBQUH
+MAGGMmh0dHA6Ly9vY3NwLmVjaS5iY2UuZWMvZWpiY2EvcHVibGljd2ViL3N0YXR1cy9vY3NwMD8G
+CCsGAQUFBzABhjNodHRwOi8vb2NzcDEuZWNpLmJjZS5lYy9lamJjYS9wdWJsaWN3ZWIvc3RhdHVz
+L29jc3AwKwYKKwYBBAGCqDsDCgQdExtBTkRFUyBQRVRST0xFVU0gRUNVQURPUiBMVEQwHQYKKwYB
+BAGCqDsDCwQPEw0xNzkwNzQ5NTA5MDAxMBoGCisGAQQBgqg7AwEEDBMKMTcxNDU1MjQwMTAdBgor
+BgEEAYKoOwMCBA8TDUFOR0VMIEVEVUFSRE8wFAYKKwYBBAGCqDsDAwQGEwRESUFaMBYGCisGAQQB
+gqg7AwQECBMGRkxPUkVTMCoGCisGAQQBgqg7AwUEHBMaQ09OVEFET1IgQ1VFTlRBUyBQT1IgUEFH
+QVIwXAYKKwYBBAGCqDsDBwROE0xOQUNJT05FUyBVTklEQVMgRTEwIDQ0IFkgUkVQVUJMSUNBIERF
+IEVMIFNBTFZBRE9SIEVESUZJQ0lPIENJVElQTEFaQSBQSVNPIDEwMBkGCisGAQQBgqg7AwgECxMJ
+MDIyOTg4NTAwMBUGCisGAQQBgqg7AwkEBxMFUXVpdG8wFwYKKwYBBAGCqDsDDAQJEwdFQ1VBRE9S
+MCAGCisGAQQBgqg7AzMEEhMQU09GVFdBUkUtQVJDSElWTzAkBgNVHREEHTAbgRlhbmdlbC5kaWF6
+QGFuZGVzcGV0cm8uY29tMIIB3wYDVR0fBIIB1jCCAdIwggHOoIIByqCCAcaGgdVsZGFwOi8vYmNl
+cWxkYXBzdWJwMS5iY2UuZWMvY249Q1JMMjY1LGNuPUFDJTIwQkFOQ08lMjBDRU5UUkFMJTIwREVM
+JTIwRUNVQURPUixsPVFVSVRPLG91PUVOVElEQUQlMjBERSUyMENFUlRJRklDQUNJT04lMjBERSUy
+MElORk9STUFDSU9OLUVDSUJDRSxvPUJBTkNPJTIwQ0VOVFJBTCUyMERFTCUyMEVDVUFET1IsYz1F
+Qz9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2WGNGh0dHA6Ly93d3cuZWNpLmJjZS5lYy9D
+UkwvZWNpX2JjZV9lY19jcmxmaWxlY29tYi5jcmykgbUwgbIxCzAJBgNVBAYTAkVDMSIwIAYDVQQK
+ExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcwNQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklD
+QUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4wDAYDVQQHEwVRVUlUTzElMCMGA1UEAxMcQUMg
+QkFOQ08gQ0VOVFJBTCBERUwgRUNVQURPUjEPMA0GA1UEAxMGQ1JMMjY1MAsGA1UdDwQEAwIFIDAf
+BgNVHSMEGDAWgBQY+fD75jIcmWY5KsqLsml9SSe/zjAdBgNVHQ4EFgQUPUgMTNl6TM/lzGk36S+/
+1hNXKkgwCQYDVR0TBAIwADAZBgkqhkiG9n0HQQAEDDAKGwRWOC4xAwIEkDANBgkqhkiG9w0BAQsF
+AAOCAgEAMXG0rj35zoiESbnkZylBGf/yqgOJ/0jWCEDs3cSCfWIvYD9Gy7n/fjumllTJvzXK1FcM
+BIODtZzhvhof5B2B6qK1OmoWGOvawo7oZuaDMdjkG9Hysc5vuZUCUnZ2rGlXlw16KngKgp5+2SiW
+cEyB5CivoGztvoU5gXrRs7Hg4BcjNgR3XAECvXur22oRW3lfcYPWc3X/YAI8NMmPzjfbZmzEHPW+
+1TBdz7bktcEyuDVL7Cd4uWoVGCupwyHiVeKzAaHkHKwlQuMgRlrWcG9KtJ5Kk0WQxcSO5XFk+Uvu
+TYrK38qJvOQkX+jqsBfMJlkCPVkMf5Ldz4ZdFsl5BrNtkhM50RsHjAOGK9Y5LiNrWTjpAG9dYEGl
+AM6Q7PJtPZhbd7PhYDbTpnbjKEZSAIxwPiHkQbTtOF1GORsG52Ohw2WTzKBph4/KVxcilTyjuF6V
+kGeVTktYqlgo4A1NotcJ6V8blCuVftxoepEM/CZvzhrus4Sg1fRnovm5hcSbKNFjJVD8ZNVzcJ7k
+nhw8pd+jgtuM1F3Cx3vWRRyVPE24rlXpZawjJ9upcB11FgWBbEVLOs2ZtXRH0D4fo6j9jyv9c9kh
+AYgnYWUwbg6XBOgjoWGBlgG+NZ8zc+geirHxM7bFuv77hoShIwY8v1eqQCG0lDxtb0E+Eh6tDPRP
+OFVgr6k=
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+vaQFtjUs2h7Loq6nRbseBwQgEdPIm/be14VskCOH7feBVlqT3MCGL2V2/+zJeVlMF+H/s3U8ZSaI
+NSRWI9K2vSTkXnPwEsJznG1sCEPaoMYlO4p14FOFXWnqTloAidaD8N9KGENTzc1OSAoIDU+fqxbS
+vnuoWw0F2lPwBVjmePGhehG7Ss55j3LGHarh/yK0BgCk/+6zXiUVcksI7fge3YerSyDBYYO3F1TH
+mkF1nZGQ6+6pHIRiG5G+kyIJPUj3kSvFn6vEi5EQdvnNevbxAAZkx065Vg8qhMCSbU+GIA5jNKaU
+iUQG/A4WZ4PC3svMqh0wN71Yl2yhHDmmj7qJoQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature760267-Object408437"><etsi:QualifyingProperties Target="#Signature760267"><etsi:SignedProperties Id="Signature760267-SignedProperties523921"><etsi:SignedSignatureProperties><etsi:SigningTime>2016-04-13T17:20:58-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>fsM5bt4ZhRRTvolxm7hfoE/syFk=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1313165283</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-590232"><etsi:Description>Contenido Comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat><etsi:DataObjectFormat ObjectReference="#Reference-ID-855743"><etsi:Description>Contenido Comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></comprobanteRetencion>]]></comprobante>
+<mensajes/>
+</autorizacion>
+

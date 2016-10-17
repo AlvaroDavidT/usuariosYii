@@ -10,6 +10,7 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language' => 'es',
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
@@ -17,8 +18,9 @@ return [
         ],
         'user' => [
             'identityClass' => 'common\models\User',
-            'enableAutoLogin' => true,
+          //  'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
+             'authTimeout' => 5,//para que cierre sesion automatico
         ],
         'session' => [
             // this is the name of the session cookie used for login on the frontend

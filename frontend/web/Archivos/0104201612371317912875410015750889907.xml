@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>0104201612371317912875410015750889907</numeroAutorizacion>
+<fechaAutorizacion>2016-04-01T12:37:13-05:00</fechaAutorizacion>
+<ambiente>PRODUCCIÓN</ambiente>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="1.0.0">
+  <infoTributaria>
+    <ambiente>2</ambiente><tipoEmision>1</tipoEmision><razonSocial>MEGADATOS SA</razonSocial>
+    <nombreComercial>MEGADATOS SA</nombreComercial>
+    <ruc>1791287541001</ruc>
+    <claveAcceso>0104201601179128754100120010110018985305161087418</claveAcceso><codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>011</ptoEmi>
+    <secuencial>001898530</secuencial>
+    <dirMatriz>Nunez de Vela E313 y Atahualpa Edificio torre del Puente 2do Piso</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>01/04/2016</fechaEmision>
+    <dirEstablecimiento>Av Rodrigo de Chavez Parque Empresarial Colon Edif ColonCorp Torre 6 Locales comerciales 4 y 5</dirEstablecimiento>
+    <contribuyenteEspecial>0176</contribuyenteEspecial>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>DIEGO XAVIER GALARZA MARTINEZ</razonSocialComprador>
+    <identificacionComprador>1710683630001</identificacionComprador>
+    <totalSinImpuestos>31.99</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <baseImponible>31.99</baseImponible>
+        <valor>3.84</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina> 0.00</propina>
+    <importeTotal>35.83</importeTotal>
+    <moneda>DOLAR</moneda>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>FP01TC</codigoPrincipal>
+      <descripcion>FTTH PRO 15/3 N-TC Consumo: APRIL    /2016</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>31.99</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>31.99</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12</tarifa>
+          <baseImponible>31.99</baseImponible>
+          <valor>3.84</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="emailCliente">diego.galarzam@gmail.com</campoAdicional>
+    <campoAdicional nombre="dirCliente">Miguel Zambrano N5649 y Alfonso Yepez Sector Colegio Matovelle Barrio Cofavi</campoAdicional>
+    <campoAdicional nombre="telfCliente">022405898;0998248190;0998248190</campoAdicional>
+    <campoAdicional nombre="ciudadCliente">QUITO</campoAdicional>
+    <campoAdicional nombre="numeroCliente">001898530</campoAdicional>
+    <campoAdicional nombre="consumoCliente">ABRIL</campoAdicional>
+    <campoAdicional nombre="fpagoCliente">DEBITO BANCARIO</campoAdicional>
+    <campoAdicional nombre="loginCliente">md-uiodxgalarzam4</campoAdicional>
+    <campoAdicional nombre="contratoCliente">001-001-0045597</campoAdicional>
+  </infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature959126">
+<ds:SignedInfo Id="Signature-SignedInfo262632">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedPropertiesID225760" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature959126-SignedProperties362714">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>vkS3/2SiudHsKMkHHc7yCYBhBPc=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1180706">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>4eOwFqQpgyH3/nX3SWcEo+utvo4=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-273488" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>mH4Hic3DK5QiJbNMoQO86ghoz9A=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue863631">
+IglQ9eUucXyNyjy6kAxXVQc9L/VkNrZ6AS7WY8Cs1V8adysvebI7XTTcynOJK7g9gjYt/NQCbOcU
+p5a6DAEVsdFUHmxy1sN5IIp0TLwaRzEV70VxDXFth0MhCuzfh3QSm8bvg/1GpfX8ZCaWICg5Y2ll
+cmRqvWG9si+isVbltfgqM59+miQ4DjI2lerHyxVV/YBoYrXg7xmwzp851Rsq6WR6mOAdIKi5V2+6
+OgOrw2k6daf+2nYn5rufb8f6fMZ5sw8JV3tQf0EfKoG7nld8/JGM6p1QOfIWnJ7mkKBcFBhRxnRm
+jEr7eNNRnKKicRh+LHiOv2EVqr5/0TtTPgoE0g==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1180706">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJrzCCCJegAwIBAgIETV3zPzANBgkqhkiG9w0BAQsFADCBkzELMAkGA1UEBhMCRUMxGzAZBgNV
+BAoTElNFQ1VSSVRZIERBVEEgUy5BLjEwMC4GA1UECxMnRU5USURBRCBERSBDRVJUSUZJQ0FDSU9O
+IERFIElORk9STUFDSU9OMTUwMwYDVQQDEyxBVVRPUklEQUQgREUgQ0VSVElGSUNBQ0lPTiBTVUIg
+U0VDVVJJVFkgREFUQTAeFw0xNDA2MTgxOTM3NTVaFw0xNjA2MTgyMDA3NTVaMIGEMQswCQYDVQQG
+EwJFQzEbMBkGA1UEChMSU0VDVVJJVFkgREFUQSBTLkEuMTAwLgYDVQQLEydFTlRJREFEIERFIENF
+UlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04xJjAkBgNVBAMTHVdhc2hpbmd0b24gRnJhbmNpc2Nv
+IEJhbGFyZXpvMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx4fNUjgLM81KMwBVyRa5
+NKsTIqZQTTtO9c97SkLBKmjeryhIUpKcbP+xjUI4wCOerW9rpSLNf8RRMEpyB1tBbuOxY27Tqs8b
+vaWwd6pHNIiscQywE8v7tHtXWqS1iYYOlFZ+d8EEYStxJdzUzuApb54/9bwBB7Xyb4v5SXJ2fGHL
+N+1HaL7azQ45p9XZO70vEFRstl4qWypISbX7gDbS3W++5rtV2HABnZtHcz2JplVeN92uuU323PvC
+YcXCstmaMMExsRSVgMawwLpEVojPLQwans5dSURdJIMhniEg3cHVnptlqTOZhymaNVJa9VMnTQ0H
+e/Hd3YW54qNxq9YEtwIDAQABo4IGFjCCBhIwCwYDVR0PBAQDAgbAMFkGCCsGAQUFBwEBBE0wSzBJ
+BggrBgEFBQcwAYY9aHR0cDovL29jc3Bndy5zZWN1cml0eWRhdGEubmV0LmVjL2VqYmNhL3B1Ymxp
+Y3dlYi9zdGF0dXMvb2NzcDCBzAYDVR0gBIHEMIHBMEAGCisGAQQBgqZyAgkwMjAwBggrBgEFBQcC
+AjAkGiJDZXJ0aWZpY2FkbyBkZSBSZXByZXNlbnRhbnRlIExlZ2FsMH0GCisGAQQBgqZyAgMwbzBt
+BggrBgEFBQcCARZhaHR0cHM6Ly93d3cuc2VjdXJpdHlkYXRhLm5ldC5lYy9sZXllc19ub3JtYXRp
+dmFzL1BvbGl0aWNhcyBkZSBDZXJ0aWZpY2FkbyBSZXByZXNlbnRhbnRlIExlZ2FsLnBkZjAeBgor
+BgEEAYKmcgMKBBATDk1FR0FEQVRPUyBTLkEuMB0GCisGAQQBgqZyAwsEDxMNMTc5MTI4NzU0MTAw
+MTAaBgorBgEEAYKmcgMBBAwTCjE3MDQwODMyOTIwJAYKKwYBBAGCpnIDAgQWExRXYXNoaW5ndG9u
+IEZyYW5jaXNjbzAYBgorBgEEAYKmcgMDBAoTCEJhbGFyZXpvMBQGCisGAQQBgqZyAwQEBhMEUG96
+bzAfBgorBgEEAYKmcgMFBBETD0dlcmVudGUgR2VuZXJhbDAzBgorBgEEAYKmcgMHBCUTI051bmV6
+IERlIFZlbGEgRTMtMTMgWSBBdi4gQXRhaHVhbHBhMBYGCisGAQQBgqZyAyIECBMGMTcwNTE1MB0G
+CisGAQQBgqZyAwgEDxMNNTkzLTItMjI2NTA1MDAVBgorBgEEAYKmcgMJBAcTBVF1aXRvMBcGCisG
+AQQBgqZyAwwECRMHRWN1YWRvcjAhBgorBgEEAYKmcgMgBBMTETAwMi0wMDEtMDAwMDAyNzE4MBMG
+CisGAQQBgqZyAyEEBRMDUEZYMCMGA1UdEQQcMBqBGGZiYWxhcmV6b0BuZXRsaWZlLm5ldC5lYzCC
+AnkGA1UdHwSCAnAwggJsMIICaKCCAmSgggJghj1odHRwOi8vb2NzcGd3LnNlY3VyaXR5ZGF0YS5u
+ZXQuZWMvZWpiY2EvcHVibGljd2ViL3N0YXR1cy9vY3NwhoHUbGRhcDovL2RpcmVjdC5zZWN1cml0
+eWRhdGEubmV0LmVjL2NuPUNSTDU4LGNuPUFVVE9SSURBRCUyMERFJTIwQ0VSVElGSUNBQ0lPTiUy
+MFNVQiUyMFNFQ1VSSVRZJTIwREFUQSxvdT1FTlRJREFEJTIwREUlMjBDRVJUSUZJQ0FDSU9OJTIw
+REUlMjBJTkZPUk1BQ0lPTixvPVNFQ1VSSVRZJTIwREFUQSUyMFMuQS4sYz1FQz9jZXJ0aWZpY2F0
+ZVJldm9jYXRpb25MaXN0P2Jhc2WGgZ5odHRwczovL2RpcmVjdC5zZWN1cml0eWRhdGEubmV0LmVj
+L35jcmwvYXV0b3JpZGFkX2RlX2NlcnRpZmljYWNpb25fc3ViX3NlY3VyaXR5X2RhdGFfZW50aWRh
+ZF9kZV9jZXJ0aWZpY2FjaW9uX2RlX2luZm9ybWFjaW9uX2N1cml0eV9kYXRhX3MuYS5fY19lY19j
+cmxmaWxlLmNybKSBpjCBozELMAkGA1UEBhMCRUMxGzAZBgNVBAoTElNFQ1VSSVRZIERBVEEgUy5B
+LjEwMC4GA1UECxMnRU5USURBRCBERSBDRVJUSUZJQ0FDSU9OIERFIElORk9STUFDSU9OMTUwMwYD
+VQQDEyxBVVRPUklEQUQgREUgQ0VSVElGSUNBQ0lPTiBTVUIgU0VDVVJJVFkgREFUQTEOMAwGA1UE
+AxMFQ1JMNTgwKwYDVR0QBCQwIoAPMjAxNDA2MTgxOTM3NTVagQ8yMDE2MDYwNDA1MDc1NVowHwYD
+VR0jBBgwFoAU9y9M4HXnYqN4llsGti5xO8xsP5AwHQYDVR0OBBYEFIS4hoX2whNjE9whWgJJAZjR
+t1fkMAkGA1UdEwQCMAAwGQYJKoZIhvZ9B0EABAwwChsEVjguMQMCA6gwDQYJKoZIhvcNAQELBQAD
+ggEBADUfct+Z2q/xKQfr2MFtavAeAT9A3E1PRbCEY03jTEX7kpzZVHvwoB6Z0MljKBnJut2o8ZtZ
+/8EjzNwxVDvl+OkY26t5pXtw5rw/INIRbqZ+wvsz1sNKjCPIY1dg6l6UXNoiX2qTqAzFJ6glKaI9
+t3VrgYgKG+XS74O7Kw9yCjrIngAAVQwDW6C9Qqf4Aybr86WBb7fpYL0JZ/x2TVluqRTgsIAlNLcT
+qHfmE3d9QDpQmB2sIOe5onOqjti9vn6W92goR+n59FiszXdsUKBD18FwpoVKD2H5m5ssSdA6sKuS
+vaDchq/pLeXSHBAikHuqDUZ0KpHnsAF1w+gP2NHqRkg=
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+x4fNUjgLM81KMwBVyRa5NKsTIqZQTTtO9c97SkLBKmjeryhIUpKcbP+xjUI4wCOerW9rpSLNf8RR
+MEpyB1tBbuOxY27Tqs8bvaWwd6pHNIiscQywE8v7tHtXWqS1iYYOlFZ+d8EEYStxJdzUzuApb54/
+9bwBB7Xyb4v5SXJ2fGHLN+1HaL7azQ45p9XZO70vEFRstl4qWypISbX7gDbS3W++5rtV2HABnZtH
+cz2JplVeN92uuU323PvCYcXCstmaMMExsRSVgMawwLpEVojPLQwans5dSURdJIMhniEg3cHVnptl
+qTOZhymaNVJa9VMnTQ0He/Hd3YW54qNxq9YEtw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature959126-Object160545"><etsi:QualifyingProperties Target="#Signature959126"><etsi:SignedProperties Id="Signature959126-SignedProperties362714"><etsi:SignedSignatureProperties><etsi:SigningTime>2016-04-01T12:36:38-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>hC9Eo0eydIG5fr2RF4y4p3/kJtc=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUB SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A.,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1298002751</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-273488"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></factura>]]></comprobante>
+<mensajes/>
+</autorizacion>
+

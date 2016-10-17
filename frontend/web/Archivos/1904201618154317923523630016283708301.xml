@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autorizacion>
+<estado>AUTORIZADO</estado>
+<numeroAutorizacion>1904201618154317923523630016283708301</numeroAutorizacion>
+<fechaAutorizacion>2016-04-19T18:15:43-05:00</fechaAutorizacion>
+<ambiente>PRODUCCIÓN</ambiente>
+<comprobante><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<comprobanteRetencion id="comprobante" version="1.0.0">
+<infoTributaria>
+<ambiente>2</ambiente>
+<tipoEmision>1</tipoEmision>
+<razonSocial>Consorcio Shushufindi S.A.</razonSocial>
+<nombreComercial>Consorcio Shushufindi S.A.</nombreComercial>
+<ruc>1792352363001</ruc>
+<claveAcceso>0404201607179235236300120010030000046490000592518</claveAcceso>
+<codDoc>07</codDoc>
+<estab>001</estab>
+<ptoEmi>003</ptoEmi>
+<secuencial>000004649</secuencial>
+<dirMatriz>Av 12 de Octubre N24-593 y Francisco Salazar Ed Expocenturi P1</dirMatriz>
+</infoTributaria>
+<infoCompRetencion>
+<fechaEmision>04/04/2016</fechaEmision>
+<dirEstablecimiento>Av 12 de Octubre N24-593 y Francisco Salazar Ed Expocenturi P1</dirEstablecimiento>
+<contribuyenteEspecial>162</contribuyenteEspecial>
+<obligadoContabilidad>SI</obligadoContabilidad>
+<tipoIdentificacionSujetoRetenido>04</tipoIdentificacionSujetoRetenido>
+<razonSocialSujetoRetenido>DYGOIL CONSULTORIA Y SERVICIOS PETROLERO</razonSocialSujetoRetenido>
+<identificacionSujetoRetenido>1790802736001</identificacionSujetoRetenido>
+<periodoFiscal>04/2016</periodoFiscal>
+</infoCompRetencion>
+<impuestos>
+<impuesto>
+<codigo>2</codigo>
+<codigoRetencion>10</codigoRetencion>
+<baseImponible>9134.52</baseImponible>
+<porcentajeRetener>20.000</porcentajeRetener>
+<valorRetenido>1826.91</valorRetenido>
+<codDocSustento>01</codDocSustento>
+<numDocSustento>001001000000586</numDocSustento>
+<fechaEmisionDocSustento>04/04/2016</fechaEmisionDocSustento>
+</impuesto>
+<impuesto>
+<codigo>1</codigo>
+<codigoRetencion>344</codigoRetencion>
+<baseImponible>76120.94</baseImponible>
+<porcentajeRetener>2</porcentajeRetener>
+<valorRetenido>1522.42</valorRetenido>
+<codDocSustento>01</codDocSustento>
+<numDocSustento>001001000000586</numDocSustento>
+<fechaEmisionDocSustento>04/04/2016</fechaEmisionDocSustento>
+</impuesto>
+</impuestos>
+<infoAdicional>
+<campoAdicional nombre="Correo Cliente">groman@dygoil.com</campoAdicional>
+<campoAdicional nombre="Direccion Cliente">AV REPUBLICA DE EL SALVADOR N309 Y SUIZA</campoAdicional>
+<campoAdicional nombre="Telefono Cliente">2440316</campoAdicional>
+</infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature573073">
+<ds:SignedInfo Id="Signature-SignedInfo232000">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></ds:CanonicalizationMethod>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></ds:SignatureMethod>
+<ds:Reference Id="SignedPropertiesID869852" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature573073-SignedProperties239951">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>pYsC8VbI1ZNCI/2d5/wBgL68lLs=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Certificate1978763">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>bMKCxScRnEclsAkuQZ09KbN2bJ8=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference-ID-690883" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>xKPa3oP0bMdm2VeKWkWs8/IEzbw=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue Id="SignatureValue21777">
+J/jGzAql2OYgqbggLpWdvYTaGn6oel8Dx4sBvbzH4UUsIYg7HcSoY5+3CRlBIv+sC1WQ1HPYKsGw
+1FQk182AJLwxvHwU8/ETPF/ReUok+4WxJqiYlxpujp1S/rjhnYn777VArwYZ7Yez6yzEJeH2r/rb
+HUopO0LwopPitr1kxrNU891KZdGFJLaxtukjT8JvBKskQCh4IcWqKK3MGbRdM0/izVLm24L3Spsf
+q7QwNxYZzqkrNIiGTv1/wh6fJTTRhOuIyImZJC4QlTurH51iWvvQEB66h40F1iAP0FO7/8Y9djz0
+v/V6U0HE/Ckt3JVLpR1kJodsPoUlUIfUeAr53g==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate1978763">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJtDCCCJygAwIBAgIETV4uCTANBgkqhkiG9w0BAQsFADCBkzELMAkGA1UEBhMCRUMxGzAZBgNV
+BAoTElNFQ1VSSVRZIERBVEEgUy5BLjEwMC4GA1UECxMnRU5USURBRCBERSBDRVJUSUZJQ0FDSU9O
+IERFIElORk9STUFDSU9OMTUwMwYDVQQDEyxBVVRPUklEQUQgREUgQ0VSVElGSUNBQ0lPTiBTVUIg
+U0VDVVJJVFkgREFUQTAeFw0xNDExMDUxOTQ5NDRaFw0xNjExMDUyMDE5NDRaMIGDMQswCQYDVQQG
+EwJFQzEbMBkGA1UEChMSU0VDVVJJVFkgREFUQSBTLkEuMTAwLgYDVQQLEydFTlRJREFEIERFIENF
+UlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04xJTAjBgNVBAMTHEZyYW5jaXNjbyBKLiBHaXJhbGRv
+IEVzY29iYXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDKIalWBKwMDn9J38/yauMD
+iJuygjsfVz4m77+mfjdNFIhNHh4XSZvMbE2TlofCL1Ut9GrfvCtFqm+NSIP6pKMvZm5/89SnYV1K
+q82HqLSGSA3tZE/Zdl/G9NGEiyJ+tGSuVhRYod+XhQnmedkTBqZB/xaD8rcHqgkUYH2pxtF0vSQz
++zExYq9rdyLorpUcpGh8MNuj3TS4AuZVC6dN3KuEY15cqHtp8JOjLvphxxmXMYY1lVUVq/QDG5Y2
+z1pUHwmbGUcg5BYQes+smdHSKV3sY1rp/cslCVEb45wskfo1IPVxfPEm+ASe7AUTAhIK45mRqUik
+ol7lAgtgs7fQuYinAgMBAAGjggYcMIIGGDALBgNVHQ8EBAMCBsAwWQYIKwYBBQUHAQEETTBLMEkG
+CCsGAQUFBzABhj1odHRwOi8vb2NzcGd3LnNlY3VyaXR5ZGF0YS5uZXQuZWMvZWpiY2EvcHVibGlj
+d2ViL3N0YXR1cy9vY3NwMIHMBgNVHSAEgcQwgcEwQAYKKwYBBAGCpnICCTAyMDAGCCsGAQUFBwIC
+MCQaIkNlcnRpZmljYWRvIGRlIFJlcHJlc2VudGFudGUgTGVnYWwwfQYKKwYBBAGCpnICAzBvMG0G
+CCsGAQUFBwIBFmFodHRwczovL3d3dy5zZWN1cml0eWRhdGEubmV0LmVjL2xleWVzX25vcm1hdGl2
+YXMvUG9saXRpY2FzIGRlIENlcnRpZmljYWRvIFJlcHJlc2VudGFudGUgTGVnYWwucGRmMCoGCisG
+AQQBgqZyAwoEHBMaQ09OU09SQ0lPIFNIVVNIVUZJTkRJIFMuQS4wHQYKKwYBBAGCpnIDCwQPEw0x
+NzkyMzUyMzYzMDAxMBgGCisGAQQBgqZyAwEEChMIQU80NjM4ODcwIAYKKwYBBAGCpnIDAgQSExBG
+cmFuY2lzY28gSmF2aWVyMBcGCisGAQQBgqZyAwMECRMHR2lyYWxkbzAXBgorBgEEAYKmcgMEBAkT
+B0VzY29iYXIwHwYKKwYBBAGCpnIDBQQREw9HZXJlbnRlIEdlbmVyYWwwOQYKKwYBBAGCpnIDBwQr
+EykxMiBkZSBPY3R1YnJlIE4yNC01OTMgeSBGcmFuY2lzY28gU2FsYXphcjAWBgorBgEEAYKmcgMi
+BAgTBjE3MDUxNzAdBgorBgEEAYKmcgMIBA8TDTU5My0yLTM5NDAxMDAwFQYKKwYBBAGCpnIDCQQH
+EwVRdWl0bzAXBgorBgEEAYKmcgMMBAkTB0VjdWFkb3IwIQYKKwYBBAGCpnIDIAQTExEwMDItMDAx
+LTAwMDAwNDYxNTATBgorBgEEAYKmcgMhBAUTA1BGWDAbBgNVHREEFDASgRBnaXJhbGRvMUBzbGIu
+Y29tMIICeQYDVR0fBIICcDCCAmwwggJooIICZKCCAmCGPWh0dHA6Ly9vY3NwZ3cuc2VjdXJpdHlk
+YXRhLm5ldC5lYy9lamJjYS9wdWJsaWN3ZWIvc3RhdHVzL29jc3CGgdRsZGFwOi8vZGlyZWN0LnNl
+Y3VyaXR5ZGF0YS5uZXQuZWMvY249Q1JMNjcsY249QVVUT1JJREFEJTIwREUlMjBDRVJUSUZJQ0FD
+SU9OJTIwU1VCJTIwU0VDVVJJVFklMjBEQVRBLG91PUVOVElEQUQlMjBERSUyMENFUlRJRklDQUNJ
+T04lMjBERSUyMElORk9STUFDSU9OLG89U0VDVVJJVFklMjBEQVRBJTIwUy5BLixjPUVDP2NlcnRp
+ZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFzZYaBnmh0dHBzOi8vZGlyZWN0LnNlY3VyaXR5ZGF0YS5u
+ZXQuZWMvfmNybC9hdXRvcmlkYWRfZGVfY2VydGlmaWNhY2lvbl9zdWJfc2VjdXJpdHlfZGF0YV9l
+bnRpZGFkX2RlX2NlcnRpZmljYWNpb25fZGVfaW5mb3JtYWNpb25fY3VyaXR5X2RhdGFfcy5hLl9j
+X2VjX2NybGZpbGUuY3JspIGmMIGjMQswCQYDVQQGEwJFQzEbMBkGA1UEChMSU0VDVVJJVFkgREFU
+QSBTLkEuMTAwLgYDVQQLEydFTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04x
+NTAzBgNVBAMTLEFVVE9SSURBRCBERSBDRVJUSUZJQ0FDSU9OIFNVQiBTRUNVUklUWSBEQVRBMQ4w
+DAYDVQQDEwVDUkw2NzArBgNVHRAEJDAigA8yMDE0MTEwNTE5NDk0NFqBDzIwMTYxMTA1MjAxOTQ0
+WjAfBgNVHSMEGDAWgBT3L0zgdedio3iWWwa2LnE7zGw/kDAdBgNVHQ4EFgQUt/G9uSyg3A06g2GF
+d7hxFjTXFxkwCQYDVR0TBAIwADAZBgkqhkiG9n0HQQAEDDAKGwRWOC4xAwIDqDANBgkqhkiG9w0B
+AQsFAAOCAQEAVcVhAOeYI6f1O0UYK9wFI8dL3iZThTziKIGXCO5djazSUvxwN8EByiyylN8ty1gu
+MGNq/vLyb3bJ3u+nDYRgxrCM6qYBbKOO2GjjPBGGljWvuTV2A0CPagVk2IPU4aaWFkMJ0ZEy3Z2a
+5FhOtWx9nkgRw0QBcY0DtS8K7I0hh3oINi5ZtXLrpDP9ZzjQAmgn5Ek94IazzRxlL7n9Yg8j+nNb
+ngjGQsTtl/YVYJtiJi/3mJwIJBQIGwFaurRgh0BuZfvvxJAT9AfxYq3hmbn9L1hxoJyDGoOaUcMa
+Ar7WINCkAA/iAwlzsi+A3k6tm9k6uZODHpXxSihV9Qv0u0t3vw==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+yiGpVgSsDA5/Sd/P8mrjA4ibsoI7H1c+Ju+/pn43TRSITR4eF0mbzGxNk5aHwi9VLfRq37wrRapv
+jUiD+qSjL2Zuf/PUp2FdSqvNh6i0hkgN7WRP2XZfxvTRhIsifrRkrlYUWKHfl4UJ5nnZEwamQf8W
+g/K3B6oJFGB9qcbRdL0kM/sxMWKva3ci6K6VHKRofDDbo900uALmVQunTdyrhGNeXKh7afCToy76
+YccZlzGGNZVVFav0AxuWNs9aVB8JmxlHIOQWEHrPrJnR0ild7GNa6f3LJQlRG+OcLJH6NSD1cXzx
+JvgEnuwFEwISCuOZkalIpKJe5QILYLO30LmIpw==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature573073-Object685276"><etsi:QualifyingProperties Target="#Signature573073"><etsi:SignedProperties Id="Signature573073-SignedProperties239951"><etsi:SignedSignatureProperties><etsi:SigningTime>2016-04-19T18:15:43-05:00</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod><ds:DigestValue>8QHhttFzsMMEXRZj2OFqA6eJfr8=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AUTORIDAD DE CERTIFICACION SUB SECURITY DATA,OU=ENTIDAD DE CERTIFICACION DE INFORMACION,O=SECURITY DATA S.A.,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1298017801</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference-ID-690883"><etsi:Description>contenido comprobante</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object></ds:Signature></comprobanteRetencion>]]></comprobante>
+<mensajes/>
+</autorizacion>
+

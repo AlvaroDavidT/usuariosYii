@@ -34,9 +34,7 @@ class ParametrizacionbddController extends Controller{
     public function actionIndex()
     {
           if (Yii::$app->user->isGuest) {
-             return $this->render('login', [
-                            'model' => $model,
-                ]);
+              $this->goHome();
           }  else {
                $this->layout='archivosLayout';
         $dataProvider = new ActiveDataProvider([
