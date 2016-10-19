@@ -64,8 +64,8 @@ class SucursalesController extends Controller
      */
     public function actionCreate()
     {
-       // if( Yii::$app->user->can('crearSucursale'))
-        //{
+       if( Yii::$app->user->can('create-sucursal')){
+        
         $model = new Sucursales();
 
         if ($model->load(Yii::$app->request->post())) {
@@ -77,11 +77,11 @@ class SucursalesController extends Controller
                 'model' => $model,
             ]);
         }
-        //}
-       // else
-      //      {
-      //      throw new ForbiddenHttpException;
-      //  }
+       }
+       else
+           {
+           throw new ForbiddenHttpException;
+        }
         
     }
     

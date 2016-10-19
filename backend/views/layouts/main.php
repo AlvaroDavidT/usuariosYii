@@ -44,32 +44,11 @@ AppAsset::register($this);
     } else {
          $menuItems= 
             [
-                 ['label' => 'Parametrizacion','items' => 
-                    [
-                     ['label' => 'Base de datos','url' => ['/parametrizacionbdd/index']],
-                  //   ['label' => 'Tag Xml','url' => ['/paramxml/index']],
-                     ['label' => 'Envio Datos','url' => ['/parametrizacion-datos-envio/index']],
-                    ]
-                ],                 
-               
-                ['label' => 'Archivos', 'items' => 
-                    [
-                     ['label' => 'Subir Archivos','url' => ['/subir/subirxml']],
-                     ['label' => 'Procesar Archivos','url' => ['/subidos/index']],
-                     ['label' => 'Datos de archivos','url' => ['/subidos/datosxml']],
-                    ]
-                ],
-                 ['label' => 'Documentos Pago','items' => 
-                    [
-                     ['label' => 'Pagos','url' => ['/documentospago/index']],
-                    ]
-                ],
-               
                 ['label' => 'Usuarios','items' => 
                     [
-                     ['label' => 'Lista de usuario','url' => ['/user/index']],
-                     ['label' => 'Asignacion Permisos','url' => ['/AuthAssignment/index']],
-                     ['label' => '','url' => ['/user/index']],
+                     ['label' => 'Lista de usuarios','url' => ['/user/index']],
+                     ['label' => 'Asignacion Permisos','url' => ['/auth-assignment/index']],
+                     ['label' => 'CrearItems','url' => ['/rbac']],
                     ]
                 ]
             ];     

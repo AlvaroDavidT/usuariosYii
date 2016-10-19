@@ -8,7 +8,7 @@ use frontend\models\Archivos;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile; // subir archivos
 use yii\data\ActiveDataProvider;
-
+use yii\web\ForbiddenHttpException;
 /**
  * ParametrizacionController implements the CRUD actions for Parametrizacion model.
  */
@@ -37,11 +37,13 @@ class SubirController extends Controller {
      * @return mixed
      */
     public function actionSubirxml() {
+        
          if (Yii::$app->user->isGuest) {
               $this->goHome();
           }  else {
-        $this->layout='archivosLayout';
+        
         if (Yii::$app->user->can('subirArchivos')) {
+            $this->layout='archivosLayout';
             $model = new SubirForm;
             $msg= null;
             if ($model->load(Yii::$app->request->post())) {
@@ -82,7 +84,8 @@ class SubirController extends Controller {
              Yii::$app->session->setFlash('success', $msg);
             return $this->render("index", ["model" => $model]);
         } else {
-            throw new ForbiddenHttpException;
+            
+             $this->redirect(['/site/noaccess']);
         }
     }
     }

@@ -161,7 +161,18 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-   
+    /*
+     * error
+     */
+    public function actionNoaccess()
+    {
+        if (Yii::$app->user->isGuest) {
+            $this->goHome();
+        } else {
+            $this->layout = 'archivosLayout';
+            return $this->render('noaccess');
+        }
+    }
 
     /**
      * Signs user up.

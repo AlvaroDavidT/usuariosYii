@@ -29,6 +29,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'columns' => [
 
                 ['class' => 'yii\grid\SerialColumn'],
+                [
+             'attribute'=>'Secuencial',
+             'value'=>'Secuencial',
+             'contentOptions'=>['style'=>'width: 520px;']
+          ],
+
                 'Secuencial',
                 'RazonSocial',
                 'ruc',
@@ -38,9 +44,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'Estado:boolean',
             //['class' => 'yii\grid\ActionColumn'],
             ],
-            'headerRowOptions' => [
-                'class' => 'success',
-            ],
+            'headerRowOptions'=>['class'=>'kartik-sheet-style'],
+               
+           // 'headerRowOptions' => [
+           //     'class' => 'success',
+           // ],
             'rowOptions' => function ($model, $index, $widget, $grid) {
 
         if ($model->Estado == 'Si') {

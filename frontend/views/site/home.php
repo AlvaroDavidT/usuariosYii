@@ -9,7 +9,7 @@ $this->title = 'My Yii Application';
     <div class="jumbotron">
         <h1></h1>
 
-        <p class="lead">Sistema de archivos</p>
+        <p class="lead">Sistema inicio</p>
 
          </div>
 

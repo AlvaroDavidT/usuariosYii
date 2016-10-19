@@ -130,7 +130,7 @@ class SubidosController extends Controller {
          
         $dataProvider = new ActiveDataProvider([
             'query' => DatosFacturas::find(),
-            'pagination' => array('pageSize' => 5),
+            'pagination' => array('pageSize' => 5,),
         ]);
            
         return $this->render('Facturas', [

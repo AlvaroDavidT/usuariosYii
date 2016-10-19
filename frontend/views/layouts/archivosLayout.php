@@ -28,11 +28,14 @@ AppArchivos::register($this);
 
         <div class="wrap">
             <?php
+      
             NavBar::begin([
-                'brandLabel' => 'My Company',
+                'brandLabel'=>'My App',
+               // 'brandLabel' => Html::img('@web/images/maxresdefault.jpg', ['alt'=>Yii::$app->name,'style'=>'width:100px;']),
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
+                    
                 ],
             ]);
 
@@ -64,15 +67,24 @@ AppArchivos::register($this);
             ?>
 
             <div class="container">
+        
                 <div class="row">
                     <div class="col-sm-3 ">
 
-                        <div class="panel panel-primary">
+                        <div class="panel panel-danger">
                             <div class="panel-heading text-center"><h4>Menu Principal</h4></div>
                             <div class="panel-body">
+                                <?= 
+              Html::img('@web/images/maxresdefault.jpg', ['alt'=>Yii::$app->name,'style'=>'width:200px;']);
+                                      
+            ?>
+                                         
+                                <hr>
                                 <?=
                                 Collapse::widget([
                                     'items' => [
+                                        
+                                        
                                         // equivalent to the above
                                         [
                                             'label' => 'Acciones con archivos',
@@ -100,17 +112,17 @@ AppArchivos::register($this);
                                             'options' => ['style' => 'text-color: red'],
                                         ],
                                         // if you want to swap out .panel-body with .list-group, you may use the following
-                                        [
-                                            'label' => 'Permisos a usuarios',
-                                            'content' => [
-                                                 BaseHtml::a('<span class="glyphicon glyphicon-user"></span> Lista Usuarios', Url::to(['/parametrizacionbdd/index']), ['class' => 'list-group-item']),
-                                                 BaseHtml::a('<span class="glyphicon glyphicon-wrench"></span> Base de Datos', Url::to(['/parametrizacionbdd/index']), ['class' => 'list-group-item']),
-                                              
-                                            ],
-                                            'contentOptions' => [],
-                                            'options' => [],
-                                        //'footer' => 'Footer' // the footer label in list-group
-                                        ],
+//                                        [
+//                                            'label' => 'Permisos a usuarios',
+//                                            'content' => [
+//                                                 BaseHtml::a('<span class="glyphicon glyphicon-user"></span> Lista Usuarios', Url::to(['/parametrizacionbdd/index']), ['class' => 'list-group-item']),
+//                                                 BaseHtml::a('<span class="glyphicon glyphicon-wrench"></span> Base de Datos', Url::to(['/parametrizacionbdd/index']), ['class' => 'list-group-item']),
+//                                              
+//                                            ],
+//                                            'contentOptions' => [],
+//                                            'options' => [],
+//                                        //'footer' => 'Footer' // the footer label in list-group
+                                        //],
                                     ]
                                 ]);
                                 ?>
