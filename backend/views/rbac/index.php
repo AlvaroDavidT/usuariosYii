@@ -6,7 +6,7 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Auth Items';
+$this->title = 'Menus Autorizacion';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="auth-item-index">
@@ -22,11 +22,11 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'name',
-            'type',
+            //'type',
             'description:ntext',
-            'rule_name',
-            'data:ntext',
-            'created_at',
+           // 'rule_name',
+           // 'data:ntext',
+            //'created_at',
             'updated_at',
 
             ['class' => 'yii\grid\ActionColumn'],
